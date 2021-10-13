@@ -1,0 +1,11 @@
+.container-fluid {
+  padding: 0;
+}
+
+.site-logo .logo {
+  display: block;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 50px;
+}
