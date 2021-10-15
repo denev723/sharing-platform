@@ -25,31 +25,28 @@
   </head>
   <body>
     <div id="wrap">
-      <div
-        class="site-header container-fluid"
-        style="padding: 0px 70px 0px 90px"
-      >
-        <div class="site-logo col-md-4">
+      <div class="site-header" style="padding: 0px 70px 0px 90px">
+        <div class="site-logo">
           <a class="main" href="/"></a>
         </div>
-        <div class="lnb col-md-5">
-          <ul class="nav nav-pills">
-            <li role="presentation" class="active">
-              <a href="#">센터소개</a>
+        <div class="lnb">
+          <ul class="nav">
+            <li>
+              <a href="#"> <span>센터소개</span></a>
             </li>
-            <li role="presentation">
-              <a href="#">강좌찾기</a>
-              <span></span>
+            <li>
+              <a href="#"><span>강좌찾기</span></a>
+              <span class="nav-emphasis"></span>
             </li>
-            <li role="presentation">
-              <a href="#">커뮤니티</a>
+            <li>
+              <a href="#"><span>커뮤니티</span></a>
             </li>
           </ul>
         </div>
-        <div class="gnb col-md-3">
+        <div class="gnb">
           <div class="btn-group" role="group">
             <a class="btn btn-link" href="#">
-              <span class="glyphicon glyphicon-user"></span>
+              <span class="login-icon"></span>
               로그인
             </a>
             <a class="btn btn-link" href="#"> 회원가입 </a>
@@ -69,7 +66,8 @@
         <a class="main" href="/"></a>
       </div>
       <div class="search-content">
-        <div class="sub-title">
+        <div class="search-sub">
+          <span class="search-deco"></span>
           <p>
             분야별 맞춤형<br />
             <b>프리미엄 창업강좌</b>를<br />
@@ -193,115 +191,59 @@
       </div>
     </div>
     <div class="side-left">
-      <div>
-        <span
-          class="glyphicon glyphicon-menu-hamburger"
-          style="font-size: 32px; color: #3e72ff; font-weight: lighter"
-        ></span>
-      </div>
-      <div>
+      <span class="menu-bar"></span>
+      <div class="menu-item">
         <div style="display: flex; flex-direction: column">
-          <span class="btn btn-link">강좌문의</span>
-          <span class="btn btn-link">마이페이지</span>
-          <span class="btn btn-link">이용가이드</span>
-          <span class="btn btn-link">공지사항</span>
+          <span class="btn btn-link"
+            ><span class="sr-only">강좌문의</span></span
+          >
+          <span class="btn btn-link"
+            ><span class="sr-only">마이페이지</span></span
+          >
+          <span class="btn btn-link"
+            ><span class="sr-only">이용가이드</span></span
+          >
+          <span class="btn btn-link"
+            ><span class="sr-only">공지사항</span></span
+          >
         </div>
       </div>
-      <div>
+      <div class="sns">
         <div style="display: flex; flex-direction: column">
-          <span class="btn btn-facebook">페이스북</span>
-          <span class="btn btn-blog">블로그</span>
-          <span class="btn btn-youtube">유튜브</span>
+          <span class="btn btn-link btn-facebook"
+            ><span class="sr-only">페이스북</span></span
+          >
+          <span class="btn btn-link btn-blog"
+            ><span class="sr-only">블로그</span></span
+          >
+          <span class="btn btn-link btn-youtube"
+            ><span class="sr-only">유튜브</span></span
+          >
         </div>
       </div>
     </div>
     <div class="side-right">
-      <div
-        style="
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        "
-      >
-        <div style="position: relative; padding: 5px 0px">
-          <span
-            style="
-              width: 165px;
-              position: absolute;
-              top: 7px;
-              right: 40px;
-              background-color: #333;
-              border-radius: 27px;
-              color: #fff;
-              padding: 5px 15px;
-              font-size: 12px;
-              display: inline;
-              text-align: center;
-            "
-            >실시간 Top 강좌</span
-          >
-          <span style="font-size: 10px" class="btn btn-dot">●</span>
+      <div class="menu-item">
+        <div class="btn-wrapper">
+          <span class="btn btn-dot">●</span>
+          <span class="btn-title">실시간 Top 강좌</span>
         </div>
-        <div style="position: relative; padding: 5px 0px">
-          <span
-            style="
-              width: 165px;
-              position: absolute;
-              top: 7px;
-              right: 40px;
-              background-color: #333;
-              border-radius: 27px;
-              color: #fff;
-              padding: 5px 15px;
-              font-size: 12px;
-              display: inline;
-              text-align: center;
-            "
-            >신규 업데이트 강좌</span
-          >
-          <span style="font-size: 10px" class="btn btn-dot">●</span>
+        <div class="btn-wrapper">
+          <span class="btn btn-dot">●</span>
+          <span class="btn-title">신규 업데이트 강좌</span>
         </div>
-        <div style="position: relative; padding: 5px 0px">
-          <span
-            style="
-              width: 165px;
-              position: absolute;
-              top: 7px;
-              right: 40px;
-              background-color: #333;
-              border-radius: 27px;
-              color: #fff;
-              padding: 5px 15px;
-              font-size: 12px;
-              display: inline;
-              text-align: center;
-            "
-            >추천강좌</span
-          >
-          <span style="font-size: 10px" class="btn btn-dot">●</span>
+        <div class="btn-wrapper">
+          <span class="btn btn-dot">●</span>
+          <span class="btn-title">추천강좌</span>
         </div>
-        <div style="position: relative; padding: 5px 0px">
-          <span
-            style="
-              width: 165px;
-              position: absolute;
-              top: 7px;
-              right: 40px;
-              background-color: #333;
-              border-radius: 27px;
-              color: #fff;
-              padding: 5px 15px;
-              font-size: 12px;
-              display: inline;
-              text-align: center;
-            "
-            >숫자로 보는 창업교육센터</span
-          >
-          <span style="font-size: 10px" class="btn btn-dot">●</span>
+        <div class="btn-wrapper">
+          <span class="btn btn-dot">●</span>
+          <span class="btn-title">숫자로 보는 창업교육센터</span>
         </div>
       </div>
-      <span class="btn btn-link">위로가기</span>
+      <div class="top-btn">
+        <a class="btn btn-link btn-top" title="위로가기"></a>
+      </div>
     </div>
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
