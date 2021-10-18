@@ -18,7 +18,7 @@ a {
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
-  padding: 14px 0px;
+  padding: 15px 0px;
   font-size: 18px;
   border-radius: 10px;
 }
@@ -80,6 +80,10 @@ a {
   left: 90px;
 }
 
+.search-menu p {
+  margin: 0 0 8px;
+}
+
 .search-menu .site-logo {
   padding-left: 27px;
 }
@@ -104,7 +108,7 @@ a {
 }
 
 .search-content .input-wrapper {
-  margin: 0px 0px 24px 0px;
+  margin: 0px 0px 20px 0px;
   position: relative;
 }
 
@@ -148,11 +152,11 @@ a {
 }
 
 .search-content .search-category {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .search-content .search-category .title {
-  font-size: 17px;
+  font-size: 18px;
   margin-left: 4px;
   letter-spacing: -1px;
 }
@@ -160,7 +164,7 @@ a {
 .search-content .search-category div {
   display: flex;
   justify-content: space-between;
-  padding: 12px 10px;
+  padding: 10px 10px;
   font-size: 13px;
   letter-spacing: -1px;
   border: 1px solid #afc5ff;
@@ -193,7 +197,7 @@ a {
 }
 
 .search-period .title {
-  font-size: 17px;
+  font-size: 18px;
   margin-left: 4px;
   letter-spacing: -1px;
 }
@@ -416,7 +420,7 @@ a {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 55px;
+  top: 58px;
   left: 0;
 }
 
@@ -430,6 +434,7 @@ a {
 
 .site-header .lnb {
   flex: 1;
+  margin-top: 2px;
   margin-left: 228px;
 }
 
@@ -466,6 +471,7 @@ a {
 
 .gnb {
   position: relative;
+  margin-top: 1px;
   margin-right: 28px;
 }
 
@@ -480,8 +486,8 @@ a {
   padding: 8px;
   border-radius: 50%;
   position: absolute;
-  top: 1px;
-  left: -38px;
+  top: -2px;
+  left: -31px;
 }
 
 /* 메인 - 푸터 */
@@ -509,7 +515,7 @@ a {
   margin-left: 640px;
   margin-right: 70px;
   height: 100vh;
-  padding-top: 195px;
+  padding-top: 185px;
 }
 
 .site-content .wrapper {
@@ -520,7 +526,7 @@ a {
 
 /* 메인 - 공지사항 */
 .notice .notice-title {
-  padding: 0;
+  padding: 0px 47px 0px 0px;
 }
 
 .notice .notice-title .title-img {
@@ -533,7 +539,7 @@ a {
 }
 
 .notice-content {
-  margin-top: 38px;
+  margin-top: 35px;
 }
 
 .notice-content > ul {
@@ -543,10 +549,12 @@ a {
 }
 
 .notice-content > ul > li > a {
-  padding: 23px 0px;
+  padding: 20px 20px 20px 0px;
   text-align: start;
-  border-bottom: 1px solid #eee;
+  text-overflow: ellipsis;
   letter-spacing: -1px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
 }
 
 .notice-content > ul > li > a:hover {
@@ -555,10 +563,83 @@ a {
 
 /* 메인 - 콘텐트 카테고리 */
 .content-category {
-  margin-top: 51px;
   height: 141px;
+  margin-top: 49px;
   background-color: #eee;
-  border-bottom-left-radius: 100px;
+  border-bottom-left-radius: 80px;
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
+  overflow: hidden;
+  padding: 18px 48px 37px 61px;
+}
+
+.content-category .item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  padding: 16px 17px 16px 18px;
+}
+
+.content-category .item .icon {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.content-category .item:nth-child(1) .icon {
+  background-image: url(/images/cate-1.png);
+}
+
+.content-category .item:nth-child(2) .icon {
+  background-image: url(/images/cate-2.png);
+}
+
+.content-category .item:nth-child(3) .icon {
+  background-image: url(/images/cate-3.png);
+}
+
+.content-category .item:nth-child(4) .icon {
+  background-image: url(/images/cate-4.png);
+}
+
+.content-category .item:nth-child(5) .icon {
+  background-image: url(/images/cate-5.png);
+}
+
+.content-category .item:nth-child(6) .icon {
+  background-image: url(/images/cate-6.png);
+}
+
+.content-category .item:nth-child(7) .icon {
+  background-image: url(/images/cate-7.png);
+}
+
+.content-category .item .title {
+  letter-spacing: -1px;
+  font-size: 13.5px;
+}
+
+/* 메인-강의목록 */
+.lecture {
+  margin-top: 66px;
+}
+
+.lecture p {
+  text-align: center;
+  line-height: 1;
+}
+
+.lecture > .title {
+  font-size: 31px;
+  letter-spacing: -1px;
+}
+
+.lecture > .sub-title {
+  font-size: 17px;
+  letter-spacing: -1px;
 }
