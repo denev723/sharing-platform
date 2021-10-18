@@ -55,34 +55,61 @@
         </div>
       </div>
       <div class="site-content container-fluid">
-        <div class="notice col-md-12">
-          <div class="notice-title">
-            <span>창업교육센터<br /></span>
-            <span>소식<br /></span>
-            <span><a class="btn btn-link" href="#">more ></a></span>
-            <span></span>
+        <div class="wrapper row">
+          <div class="notice row">
+            <div class="notice-title col-md-5 col-xs-12">
+              <span class="title-img">
+                <span class="sr-only">창업교육센터 소식</span>
+              </span>
+            </div>
+            <div class="notice-content col-md-7 col-xs-12">
+              <ul>
+                <li>
+                  <a class="btn btn-link" href="#">
+                    [알림] 창업교육센터 온라인교육 플랫폼의 신규 컨텐츠가
+                    업데이트 되었습니다.
+                  </a>
+                </li>
+                <li>
+                  <a class="btn btn-link" href="#">
+                    [공지] 2021년 창업교육센터 홈페이지 서비스 만족도 조사 실시
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="notice-content">
-            <ul>
-              <li>
-                <a class="btn btn-link" href="#">
-                  [알림] 창업교육센터 온라인교육 플랫폼의 신규 컨텐츠가 업데이트
-                  되었습니다.
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-link" href="#">
-                  [공지] 2021년 창업교육센터 홈페이지 서비스 만족도 조사 실시
-                </a>
-              </li>
-            </ul>
+          <div class="content-category row"></div>
+          <div class="lecture lecture-rt" id="lecture-rt">
+            <p class="title">실시간 Top강좌</p>
+            <p class="sub-title">현재 가장 인기있는 강좌를 소개합니다.</p>
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="thumbnail">
+                  <img
+                    src="/images/temps/thumb-1.png"
+                    alt="공공기술 기획형 창업지원"
+                  />
+                  <div class="caption">
+                    <h3 class="title">공공기술 기획형 창업지원</h3>
+                    <p class="description">
+                      잠재력이 높은 전국의 학생 창업팀 300개를 선발하여,
+                      성숙도에 따른 체계적 교육멘토링을 통해 스타트업으로 성장
+                    </p>
+                    <div class="info-wrapper">
+                      <div class="info">
+                        <span>오민석 교수</span>
+                        <span>|</span>
+                        <span>20,330</span>
+                      </div>
+                      <div class="status">
+                        <span>수강가능</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="content-category col-md-12"></div>
-        <div class="lecture lecture-rt" id="lecture-rt">
-          <p class="title">실시간 Top강좌</p>
-          <p class="sub-title">현재 가장 인기있는 강좌를 소개합니다.</p>
-          <div class="rt-category"></div>
         </div>
       </div>
     </div>
@@ -90,111 +117,109 @@
       <div class="site-logo">
         <a class="main" href="/"></a>
       </div>
+      <div class="search-sub">
+        <span></span>
+      </div>
       <div class="search-content">
-        <div class="search-sub">
-          <span class="search-deco"></span>
-          <p>
-            분야별 맞춤형<br />
-            <b>프리미엄 창업강좌</b>를<br />
-            만나보세요.
-          </p>
-        </div>
         <form>
-          <input
-            type="text"
-            name="search"
-            id="search"
-            class="search-input"
-            placeholder="강좌/강사명을 검색해주세요"
-          />
-          <div class="grid-three">
+          <div class="input-wrapper row">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="form-class input-lg"
+              placeholder="강좌/강사명을 검색해주세요"
+            />
+            <button type="submit" class="search-btn"></button>
+          </div>
+          <div class="search-category row">
             <p class="title">대학별 검색</p>
-            <span class="btn btn-category">
+            <div class="btn-category col-md-4 col-xs-6">
               <span class="category-title">경희대</span>
               <span>1,028</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-6">
               <span class="category-title">동국대</span>
               <span class="category-number">67</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-6">
               <span class="category-title">산기대</span>
               <span class="category-number">205</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-6">
               <span class="category-title">성균관대</span>
               <span class="category-number">302</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-6">
               <span class="category-title">아주대</span>
               <span class="category-number">84</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-6">
               <span class="category-title">한양대ERICA</span>
               <span class="category-number">1,783</span>
-            </span>
+            </div>
           </div>
-          <div class="grid-two">
+          <div class="search-category row">
             <p class="title">분류별 검색(대학별 특화 & 산업분류)</p>
-            <span class="btn btn-category">
+            <div class="btn-category col-md-6 col-xs-12">
               <span class="category-title">미디어문화, ICT IOT</span>
               <span class="category-number">106</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-6 col-xs-12">
               <span class="category-title">엔터테인먼트 창업</span>
               <span class="category-number">832</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-6 col-xs-12">
               <span class="category-title">신재생에너지, 바이오헬스</span>
               <span class="category-number">82</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-6 col-xs-12">
               <span class="category-title">3D프린터, 소셜벤처</span>
               <span class="category-number">1,012</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-6 col-xs-12">
               <span class="category-title">미정</span>
               <span class="category-number">0</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-6 col-xs-12">
               <span class="category-title">미정</span>
               <span class="category-number">0</span>
-            </span>
+            </div>
           </div>
-          <div class="grid-three">
+          <div class="search-category row">
             <p class="title">필수강좌 검색</p>
-            <span class="btn btn-category">
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">기업가정신</span>
               <span class="category-number">1,052</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">비즈니스모델</span>
               <span class="category-number">104</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">사업계획서</span>
               <span class="category-number">809</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">지식재산권</span>
               <span class="category-number">120</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">마케팅/판로</span>
               <span class="category-number">95</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">세무/회계</span>
               <span class="category-number">122</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">법률/노무</span>
               <span class="category-number">78</span>
-            </span>
-            <span class="btn btn-category">
+            </div>
+            <div class="btn-category col-md-4 col-xs-4">
               <span class="category-title">투자관련</span>
               <span class="category-number">107</span>
-            </span>
+            </div>
           </div>
           <div class="search-period">
             <p class="title">강좌기간 검색</p>
@@ -225,7 +250,9 @@
       </div>
     </div>
     <div class="side-left">
-      <span class="menu-bar"></span>
+      <a href="#sitemap" class="menu-bar"
+        ><span class="sr-only">전체 메뉴</span>
+      </a>
       <div class="menu-item">
         <div style="display: flex; flex-direction: column">
           <span class="btn btn-link">

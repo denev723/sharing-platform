@@ -1,10 +1,10 @@
 const btnCategories = document.querySelectorAll(".btn-category");
 btnCategories.forEach((btnCategory) =>
   btnCategory.addEventListener("click", function () {
-    if (btnCategory.classList.contains("btn-active")) {
-      btnCategory.classList.remove("btn-active");
+    if (btnCategory.classList.contains("active")) {
+      btnCategory.classList.remove("active");
     } else {
-      btnCategory.classList.add("btn-active");
+      btnCategory.classList.add("active");
     }
   }),
 );
