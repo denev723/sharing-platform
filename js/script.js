@@ -1,10 +1,22 @@
-const btnCategories = document.querySelectorAll(".btn-category");
-btnCategories.forEach((btnCategory) =>
-  btnCategory.addEventListener("click", function () {
-    if (btnCategory.classList.contains("active")) {
-      btnCategory.classList.remove("active");
+const searchCategories = document.querySelectorAll(".btn-category");
+const rtCategorories = document.querySelectorAll(".category-item");
+
+rtCategorories.forEach((rtCategory) =>
+  rtCategory.addEventListener("click", function () {
+    if (rtCategory.classList.contains("active")) {
+      rtCategory.classList.remove("active");
     } else {
-      btnCategory.classList.add("active");
+      rtCategory.classList.add("active");
+    }
+  }),
+);
+
+searchCategories.forEach((searchCategory) =>
+  searchCategory.addEventListener("click", function () {
+    if (searchCategory.classList.contains("active")) {
+      searchCategory.classList.remove("active");
+    } else {
+      searchCategory.classList.add("active");
     }
   }),
 );

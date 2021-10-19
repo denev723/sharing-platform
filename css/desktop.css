@@ -36,31 +36,6 @@ a {
   background-position: center;
 }
 
-.btn-dot {
-  border-radius: 50%;
-  padding: 2px 4px;
-  font-size: 10px;
-}
-
-.btn-dot:hover {
-  border-radius: 50%;
-  border: 1px solid #bbb;
-}
-
-.btn-link {
-  color: inherit;
-}
-
-.btn-link:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
-.btn-link:focus {
-  text-decoration: none;
-  color: inherit;
-}
-
 .container-fluid,
 .container {
   padding: 0;
@@ -203,9 +178,9 @@ a {
 }
 
 .search-content .btn-default {
-  margin-top: 40px;
+  margin-top: 39px;
   width: 100%;
-  font-size: 18px;
+  font-size: 19px;
   letter-spacing: -1px;
 }
 
@@ -358,10 +333,6 @@ a {
 }
 
 .side-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0%;
   right: 0%;
@@ -371,39 +342,74 @@ a {
   border-left: 1px solid #d9dade;
 }
 
-.side-right .menu-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.right-menu {
+  position: fixed;
+  top: 381px;
+  right: 25px;
+  z-index: 9;
 }
 
-.side-right .menu-item .btn-wrapper {
-  position: relative;
-  padding: 7px 0px;
+.right-menu .btn-wrapper {
+  margin-bottom: 10px;
+  text-align: right;
 }
 
-.btn-wrapper .btn-title {
-  width: 165px;
-  position: absolute;
-  top: 6px;
-  right: 40px;
-  background-color: #333;
-  border-radius: 27px;
-  color: #fff;
-  padding: 5px 15px;
+.right-menu .btn-title {
   font-size: 12px;
-  display: none;
-  text-align: center;
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  line-height: 2;
+  border-radius: 27px;
 }
 
-.btn-dot:hover + .btn-title {
+.right-menu .btn-dot {
+  color: #bbb;
+  padding: 8px;
+}
+
+.right-menu .btn-dot span {
+  display: block;
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+}
+
+.right-menu .btn-dot:hover {
+  border-radius: 50%;
+  border: 1px solid #bbb;
+}
+
+.btn-dot:hover > span {
+  background-color: #333;
+}
+
+.btn-dot:hover > .btn-title {
   display: inline-block;
+}
+
+.btn-link {
+  color: inherit;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-link:focus {
+  text-decoration: none;
+  color: inherit;
 }
 
 .side-right .top-btn {
   padding: 20px;
   margin-bottom: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .side-right .btn-top {
@@ -493,21 +499,23 @@ a {
 /* 메인 - 푸터 */
 .site-footer {
   background-color: #1d44ad;
-  padding: 17px 0px 10px 68px;
+  padding: 18px 0px 10px 68px;
   font-size: 12px;
 }
 
 .site-footer .btn-link {
   display: inline-block;
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: -1px;
 }
 
 .site-footer address {
   padding-left: 13px;
-  color: #fff;
-  opacity: 0.4;
+  color: #5f80d8;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  line-height: 1.7;
 }
 
 /* 메인 */
@@ -627,19 +635,181 @@ a {
 /* 메인-강의목록 */
 .lecture {
   margin-top: 66px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.lecture p {
+.lecture a:hover {
+  text-decoration: none;
+}
+
+.lecture .title,
+.lecture .sub-title {
   text-align: center;
   line-height: 1;
+  letter-spacing: -1px;
 }
 
 .lecture > .title {
   font-size: 31px;
-  letter-spacing: -1px;
 }
 
 .lecture > .sub-title {
   font-size: 17px;
+}
+
+.lecture .item-list {
+  margin-top: 67px;
+}
+
+.lecture .thumbnail {
+  padding: 0;
+  border-radius: 20px;
+  width: 98%;
+  margin-bottom: 59px;
+}
+
+.lecture a:hover .thumbnail {
+  border: 1px solid #333;
+}
+
+.lecture .thumbnail img {
+  height: 250px;
+}
+
+.lecture .thumbnail .caption {
+  padding: 0px;
+}
+
+.lecture .thumbnail .caption .title-wrapper {
+  padding: 9px 24px 16px 24px;
+}
+
+.lecture .thumbnail .caption .title {
+  text-align: start;
+  font-size: 21px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.lecture .thumbnail .caption .description {
+  font-size: 13px;
   letter-spacing: -1px;
+  line-height: 1.5;
+  color: #aaa;
+}
+
+.lecture .thumbnail .caption .info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  padding: 15px 15px 15px 21px;
+}
+
+.lecture .thumbnail .caption .info-wrapper .info {
+  position: relative;
+  letter-spacing: -1px;
+}
+
+.lecture .thumbnail .caption .info-wrapper .info .user {
+  display: block;
+  background-image: url(/images/user.png);
+  background-position: center;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+}
+
+.lecture .thumbnail .caption .info-wrapper .info .play {
+  display: block;
+  background-image: url(/images/play.png);
+  background-position: center;
+  background-size: cover;
+  width: 12px;
+  height: 15px;
+  position: absolute;
+  bottom: 2px;
+  left: 103px;
+}
+
+.lecture .thumbnail .caption .info-wrapper .info .teacher,
+.lecture .thumbnail .caption .info-wrapper .info .view {
+  padding-left: 23px;
+  padding-right: 3px;
+}
+
+.lecture .thumbnail .caption .info-wrapper .status span {
+  padding: 8px 9px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* 메인 - 실시간 Top */
+
+.rt-category {
+  margin-top: 40px;
+}
+
+.rt-category .category-item {
+  padding: 12px 14px;
+  letter-spacing: -1px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
+/* 메인 - 신규강좌 */
+.lecture-new {
+  margin-top: 40px;
+}
+
+/* 메인 - 추천강좌 */
+.lecture-recommend {
+  margin-top: 40px;
+}
+
+/* 메인 - 숫자로 보는 창업교육센터 */
+.lecture-outro {
+  margin-top: 30px;
+  padding-bottom: 133px;
+}
+
+.lecture-outro .item-wrapper {
+  margin-top: 82px;
+}
+
+.lecture-outro .item-wrapper .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lecture-outro .item-wrapper .item .btn-link {
+  position: relative;
+  padding: 12px 32px 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 27px;
+  margin-top: 26px;
+}
+
+.lecture-outro .item-wrapper .item .btn-link span {
+  display: block;
+  background-image: url(/images/right-arrow-b.png);
+  background-position: center;
+  background-size: cover;
+  width: 18px;
+  height: 17px;
+  position: absolute;
+  top: 14px;
+  right: 0;
+  margin-right: 10px;
+}
+
+.lecture-outro .outro-img {
+  margin-top: 82px;
+  margin-left: 11px;
 }
