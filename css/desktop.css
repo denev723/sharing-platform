@@ -45,6 +45,10 @@ a {
   margin: 0;
 }
 
+#wrap {
+  min-width: 1350px;
+}
+
 /* 공통 - 검색메뉴 */
 .search-menu {
   background-color: #3e72ff;
@@ -127,16 +131,21 @@ a {
 }
 
 .search-content .search-category {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+}
+
+.search-content .search-category .btn-category {
+  padding: 2px;
 }
 
 .search-content .search-category .title {
-  font-size: 18px;
+  font-size: 17px;
   margin-left: 4px;
   letter-spacing: -1px;
+  margin-bottom: 5px;
 }
 
-.search-content .search-category div {
+.search-content .search-category .btn-category > div {
   display: flex;
   justify-content: space-between;
   padding: 10px 10px;
@@ -147,15 +156,15 @@ a {
   cursor: pointer;
 }
 
-.search-content .search-category div:hover {
+.search-content .search-category .btn-category > div:hover {
   border: 1px solid #fff;
 }
 
-.search-content .search-category div.active {
+.search-content .search-category .btn-category > div.active {
   background-color: #fff;
 }
 
-.search-content .search-category div.active .category-title {
+.search-content .search-category .btn-category > div.active .category-title {
   color: #3e72ff;
 }
 
@@ -185,9 +194,9 @@ a {
 }
 
 .search-pop {
-  position: absolute;
-  top: 0;
-  left: 600px;
+  position: fixed;
+  top: 418px;
+  left: 640px;
   width: 80px;
   height: 251px;
   display: flex;
@@ -197,7 +206,7 @@ a {
   background-color: #3e72ff;
   color: #fff;
   font-size: 16px;
-  padding: 34px 0px;
+  padding: 34px 0px 25px 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: none;
@@ -221,8 +230,8 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 27px;
-  height: 27px;
+  width: 32px;
+  height: 32px;
 }
 
 /* 공통 - 사이드바 */
@@ -239,6 +248,7 @@ a {
   width: 91px;
   height: 100vh;
   z-index: 9;
+  background-color: #fff;
 }
 
 .side-left .menu-bar {
@@ -340,6 +350,7 @@ a {
   height: 100vh;
   z-index: 9;
   border-left: 1px solid #d9dade;
+  background-color: #fff;
 }
 
 .right-menu {
@@ -361,6 +372,7 @@ a {
   color: #fff;
   line-height: 2;
   border-radius: 27px;
+  display: none;
 }
 
 .right-menu .btn-dot {
@@ -386,10 +398,6 @@ a {
   background-color: #333;
 }
 
-.btn-dot:hover > .btn-title {
-  display: inline-block;
-}
-
 .btn-link {
   color: inherit;
 }
@@ -408,14 +416,21 @@ a {
   padding: 20px;
   margin-bottom: 5px;
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   right: 0;
 }
 
 .side-right .btn-top {
+  display: block;
   background-image: url(/images/top-btn.png);
-  width: 20px;
-  height: 30px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 31px;
+  cursor: pointer;
+}
+
+.side-right .btn-top a:active {
+  box-shadow: none;
 }
 
 /* 메인 - 헤더 */
@@ -537,13 +552,15 @@ a {
   padding: 0px 47px 0px 0px;
 }
 
-.notice .notice-title .title-img {
-  display: block;
+.notice .notice-title > a {
+  display: inline-block;
   background-image: url(/images/notice-title.png);
-  background-size: cover;
   background-position: center;
-  width: 86%;
-  height: 170px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: calc(172 / 300 * 100%);
 }
 
 .notice-content {
@@ -572,12 +589,13 @@ a {
 /* 메인 - 콘텐트 카테고리 */
 .content-category {
   height: 141px;
-  margin-top: 49px;
+  margin-top: 45px;
   background-color: #eee;
   border-bottom-left-radius: 80px;
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
-  overflow: hidden;
+  overflow: scroll;
+  white-space: nowrap;
   padding: 18px 48px 37px 61px;
 }
 
@@ -588,6 +606,12 @@ a {
   align-items: center;
   float: left;
   padding: 16px 17px 16px 18px;
+}
+
+.content-category .item a:hover,
+.content-category .item a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 .content-category .item .icon {
@@ -639,6 +663,16 @@ a {
   margin-right: -15px;
 }
 
+.lecture .thumbnail .thumbnail-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 .lecture a:hover {
   text-decoration: none;
 }
@@ -659,7 +693,7 @@ a {
 }
 
 .lecture .item-list {
-  margin-top: 67px;
+  margin-top: 38px;
 }
 
 .lecture .thumbnail {
@@ -667,6 +701,9 @@ a {
   border-radius: 20px;
   width: 98%;
   margin-bottom: 59px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .lecture a:hover .thumbnail {
@@ -690,6 +727,9 @@ a {
   font-size: 21px;
   margin-top: 14px;
   margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .lecture .thumbnail .caption .description {
@@ -709,6 +749,12 @@ a {
 .lecture .thumbnail .caption .info-wrapper .info {
   position: relative;
   letter-spacing: -1px;
+  display: flex;
+  align-items: center;
+}
+
+.lecture .thumbnail .caption .info-wrapper .info span {
+  margin-right: 5px;
 }
 
 .lecture .thumbnail .caption .info-wrapper .info .user {
@@ -718,9 +764,6 @@ a {
   background-size: cover;
   width: 16px;
   height: 16px;
-  position: absolute;
-  bottom: 2px;
-  left: 0;
 }
 
 .lecture .thumbnail .caption .info-wrapper .info .play {
@@ -730,14 +773,10 @@ a {
   background-size: cover;
   width: 12px;
   height: 15px;
-  position: absolute;
-  bottom: 2px;
-  left: 103px;
 }
 
 .lecture .thumbnail .caption .info-wrapper .info .teacher,
 .lecture .thumbnail .caption .info-wrapper .info .view {
-  padding-left: 23px;
   padding-right: 3px;
 }
 
@@ -751,24 +790,37 @@ a {
 /* 메인 - 실시간 Top */
 
 .rt-category {
-  margin: 40px 31px 0px;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  margin: 0 37px 0 30px;
+  white-space: nowrap;
+  overflow: scroll;
 }
 
 .rt-category .category-item {
-  padding: 12px 14px;
+  padding: 9px 14px;
   letter-spacing: -1px;
   background-color: #f0f0f0;
   border-radius: 20px;
+  border: none;
 }
 
 /* 메인 - 신규강좌 */
 .lecture-new {
-  margin-top: 40px;
+  margin-top: 30px;
+}
+
+.lecture-new .item-list {
+  margin-top: 60px;
 }
 
 /* 메인 - 추천강좌 */
 .lecture-recommend {
-  margin-top: 40px;
+  margin-top: 32px;
+}
+
+.lecture-recommend .item-list {
+  margin-top: 59px;
 }
 
 /* 메인 - 숫자로 보는 창업교육센터 */
@@ -778,7 +830,7 @@ a {
 }
 
 .lecture-outro .item-wrapper {
-  margin-top: 82px;
+  margin-top: 80px;
 }
 
 .lecture-outro .item-wrapper .item {
@@ -811,5 +863,15 @@ a {
 
 .lecture-outro .outro-img {
   margin-top: 82px;
-  margin-left: 11px;
+}
+
+.lecture-outro .outro-img > a {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  padding-top: calc(208 / 829 * 100%);
+  background-image: url("/images/outro-4.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
