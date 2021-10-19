@@ -21,9 +21,23 @@
 //   }),
 // );
 
-const links = document.querySelectorAll("a[href='#']");
-links.forEach((link) => link.addEventListener("click", alertLink));
+$(function () {
+  $("a[href='#']").each(function (index, item) {
+    item.addEventListener("click", alertLink);
+  });
 
-function alertLink() {
-  alert("준비중입니다.");
-}
+  function alertLink() {
+    alert("준비중입니다.");
+  }
+
+  $(".btn-dot").hover(
+    function () {
+      // over
+      $(this).prev().css("display", "inline");
+    },
+    function () {
+      // out
+      $(this).prev().css("display", "none");
+    },
+  );
+});
