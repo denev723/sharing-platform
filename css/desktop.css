@@ -87,7 +87,7 @@ a:hover {
 }
 
 .search-content {
-  padding: 25px 80px 40px 80px;
+  padding: 25px 79px 40px 78px;
   color: #fff;
 }
 
@@ -145,7 +145,7 @@ a:hover {
 
 .search-content .search-category .title {
   font-size: 17px;
-  margin-left: 4px;
+  margin-left: 5px;
   letter-spacing: -1px;
   margin-bottom: 5px;
 }
@@ -186,8 +186,8 @@ a:hover {
 }
 
 .search-period .title {
-  font-size: 18px;
-  margin-left: 4px;
+  font-size: 17px;
+  margin-left: 5px;
   letter-spacing: -1px;
 }
 
@@ -199,17 +199,117 @@ a:hover {
 }
 
 input[type="range"] {
-  width: 100%;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  z-index: 9;
+}
+
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: transparent;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -3px;
+  position: relative;
+  z-index: 9;
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
 }
 
 input[type="range"]:focus {
-  outline: none;
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #82a4ff;
+  border-radius: 1.3px;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #82a4ff;
+  border-radius: 1.3px;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 1.3px;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #fff;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #fff;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #82a4ff;
+}
+
+.search-period > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.search-period .range-marks {
+  margin-top: -5px;
+  z-index: 0;
+}
+
+.search-period .range-marks span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 .search-pop {
-  position: fixed;
+  position: absolute;
   top: 418px;
   left: 640px;
   width: 80px;
@@ -260,10 +360,11 @@ input[type="range"]:focus {
   position: fixed;
   top: 0;
   left: 0;
-  width: 91px;
+  width: 90px;
   height: 100vh;
   z-index: 9;
   background-color: #fff;
+  border-right: 1px solid #d9dade;
 }
 
 .side-left .menu-bar {
@@ -361,7 +462,7 @@ input[type="range"]:focus {
   position: fixed;
   top: 0%;
   right: 0%;
-  width: 70px;
+  width: 71px;
   height: 100vh;
   z-index: 9;
   border-left: 1px solid #d9dade;
@@ -451,6 +552,7 @@ input[type="range"]:focus {
 /* 메인 - 헤더 */
 .site-header {
   padding: 0px 70px 0px 90px;
+  min-width: 1250px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -479,6 +581,7 @@ input[type="range"]:focus {
   justify-content: center;
   font-size: 18px;
   font-weight: bolder;
+  position: relative;
 }
 
 .lnb .nav > li {
@@ -505,6 +608,22 @@ input[type="range"]:focus {
   right: 7px;
 }
 
+.lnb .nav .depth {
+  font-weight: normal;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 10px;
+  display: flex;
+  width: max-content;
+  font-size: 13px;
+}
+
+.lnb .nav .depth > li {
+  padding: 0px 6px;
+}
+
 .gnb {
   position: relative;
   margin-top: 1px;
@@ -529,7 +648,7 @@ input[type="range"]:focus {
 /* 메인 - 푸터 */
 .site-footer {
   background-color: #1d44ad;
-  padding: 18px 0px 10px 68px;
+  padding: 18px 18px 10px 68px;
   font-size: 12px;
 }
 
@@ -609,9 +728,18 @@ input[type="range"]:focus {
   border-bottom-left-radius: 80px;
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
-  overflow: scroll;
+  overflow-x: scroll;
   white-space: nowrap;
-  padding: 18px 48px 37px 61px;
+  padding: 5px 48px 13px 62px;
+}
+
+.content-category .item-wrapper {
+  height: 100%;
+  padding: 10px 0px;
+}
+
+.content-category .item-wrapper .item {
+  display: inline-block;
 }
 
 .content-category .item a {
@@ -620,7 +748,7 @@ input[type="range"]:focus {
   justify-content: center;
   align-items: center;
   float: left;
-  padding: 16px 17px 16px 18px;
+  padding: 16px 14px 16px 17px;
 }
 
 .content-category .item a:hover,
@@ -686,9 +814,20 @@ input[type="range"]:focus {
   height: 250px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.lecture a:hover {
+.lecture .thumbnail .thumbnail-img .thumb-play {
+  background-image: url(/images/thumb-play.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+}
+
+.lec .lecture a:hover {
   text-decoration: none;
 }
 
@@ -809,7 +948,7 @@ input[type="range"]:focus {
   padding-bottom: 21px;
   margin: 0 37px 0 30px;
   white-space: nowrap;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 
 .rt-category .category-item {
@@ -889,4 +1028,252 @@ input[type="range"]:focus {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* 메인 - 스크롤버튼 */
+.scroll-btn {
+  position: absolute;
+  top: 1130px;
+  right: 87px;
+}
+
+.scroll-btn span {
+  display: block;
+  background-image: url(/images/scroll-btn.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 102px;
+  height: 45px;
+}
+
+/* 메인제외 - 검색메뉴 */
+.page-other .search-menu {
+  position: fixed;
+  top: 0;
+  left: -460px;
+}
+
+.page-other .search-pop {
+  display: flex;
+  left: 550px;
+}
+
+/* 메인제외 - 헤더 */
+.page-other .site-header {
+  min-width: 970px;
+}
+
+.page-other .lnb {
+  margin-left: -41px;
+}
+
+.page-other .gnb {
+  margin-right: 35px;
+}
+
+.page-other .wrapper-snb {
+  width: 100%;
+  height: 60px;
+  background-color: #3e72ff;
+}
+
+/* 메인 제외 - snb */
+.page-other .site-content {
+  margin-left: 90px;
+  padding-top: 149px;
+}
+
+.page-other .site-content .wrapper {
+  max-width: 1250px;
+  padding: 0px 78px;
+}
+
+.page-other .site-content .wrapper-snb .depth {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: -1;
+}
+
+/* 메인제외 - 푸터 */
+.page-other .site-footer {
+  background-color: #fff;
+  margin-left: -78px;
+  margin-right: -78px;
+  padding: 16px 0px 23px 0px;
+  margin-bottom: 9px;
+  border-top: 1px solid #ccc;
+}
+
+.page-other .site-footer > div {
+  margin-left: -10px;
+}
+
+.page-other .site-footer .btn-link {
+  color: #333;
+  font-size: 13px;
+  padding: 6px 9px;
+}
+
+.page-other .site-footer address {
+  padding-left: 10px;
+  color: #a9a9a9;
+  margin-top: 5px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+  font-size: 13px;
+  letter-spacing: -0.8px;
+  padding: 0;
+}
+
+/* lecture - 필터메뉴 */
+.page-lecture .lecture-filter {
+  margin-top: 90px;
+  margin-right: -78px;
+  margin-left: -78px;
+}
+
+.page-lecture .lecture-filter .subtitle-wrapper {
+  float: left;
+}
+
+.page-lecture .lecture-filter .subtitle-wrapper .total {
+  font-size: 44px;
+  letter-spacing: -2px;
+  font-weight: bold;
+  padding-bottom: 11px;
+  border-bottom: 4px solid #3e72ff;
+  color: #3e72ff;
+}
+
+.site-content .lecture-filter .subtitle-wrapper .subtitle {
+  font-size: 44px;
+  letter-spacing: -3px;
+  font-weight: bold;
+}
+
+.site-content .lecture-filter .btn-group {
+  float: right;
+  margin-top: 21px;
+}
+
+.site-content .lecture-filter .btn-default {
+  color: #333;
+  font-size: 14px;
+}
+
+.site-content .lecture-filter .btn-default:not(:last-child) {
+  padding: 15px 6px 15px 0px;
+  color: #bbb;
+  margin-top: -2px;
+}
+
+.site-content .lecture-filter .btn-default:not(:last-child)::before {
+  content: "|";
+  color: #bbb;
+  padding-right: 10px;
+}
+
+.site-content .lecture-filter .btn-default:first-child::before {
+  content: none;
+}
+
+.site-content .lecture-filter .btn-default:not(:last-child).active {
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: #333;
+  margin-top: 2px;
+}
+
+.site-content .lecture-filter .btn-default:not(:last-child):focus {
+  background-color: transparent;
+  border-color: transparent;
+  outline: none;
+}
+
+.site-content .lecture-filter .btn-default:not(:last-child):active {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.site-content .lecture-filter .btn-group .dropdown-toggle {
+  padding: 14px 24px 14px 13px;
+  border-radius: 7px;
+  border: 1px solid #eee;
+  margin-left: 7px;
+}
+.site-content .lecture-filter .btn-group .dropdown-toggle .caret {
+  margin-left: 67px;
+}
+
+.site-content .filter-list {
+  margin-top: 47px;
+  margin-left: -78px;
+  margin-right: -78px;
+  background-color: #eee;
+  border-radius: 6px;
+}
+
+.site-content .filter-list .list-item {
+  float: left;
+}
+
+.site-content .filter-list .reset-btn {
+  float: right;
+  padding: 27px 28px;
+}
+
+.site-content .filter-list .reset-btn .btn-reset {
+  padding: 15px 18px;
+  border-radius: 27px;
+  color: #3e72ff;
+  border: 2px solid #3e72ff;
+  letter-spacing: -2px;
+  font-size: 16px;
+}
+
+.site-content .filter-list .list-item {
+  padding: 27px 28px 18px;
+}
+
+.site-content .filter-list .list-item > li {
+  list-style: none;
+  float: left;
+  padding: 15px 0px 15px 24px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 27px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  margin-right: 6px;
+}
+
+.site-content .filter-list .list-item .del-btn {
+  display: inline-block;
+  background-image: url(/images/del-btn.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 10px;
+  padding: 8px 13px 6px 36px;
+  margin-left: 5px;
+}
+
+/* lecture - 강의목록 */
+.site-content .lecture .more-btn {
+  text-align: center;
+}
+
+.site-content .lecture .more-btn .btn-default {
+  background-image: url(/images/more-btn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 91px;
+  height: 113px;
 }
