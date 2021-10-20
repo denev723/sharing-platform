@@ -325,6 +325,7 @@ input[type="range"]::-ms-fill-upper {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: none;
+  cursor: pointer;
 }
 
 .search-pop .search-icon {
@@ -1084,8 +1085,8 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-other .site-content .wrapper {
-  max-width: 1250px;
-  padding: 0px 78px;
+  max-width: 1400px;
+  padding: 0px 77px 0px 74px;
 }
 
 .page-other .site-content .wrapper-snb .depth {
@@ -1099,17 +1100,19 @@ input[type="range"]::-ms-fill-upper {
   letter-spacing: -1;
 }
 
-/* 메인제외 - 푸터 */
+/* 메인제외 - footer */
 .page-other .site-footer {
   background-color: #fff;
-  margin-left: -78px;
-  margin-right: -78px;
   padding: 16px 0px 23px 0px;
   margin-bottom: 9px;
   border-top: 1px solid #ccc;
 }
 
-.page-other .site-footer > div {
+.page-other .site-footer .footer-left {
+  float: left;
+}
+
+.page-other .site-footer .footer-left > div {
   margin-left: -10px;
 }
 
@@ -1120,7 +1123,6 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-other .site-footer address {
-  padding-left: 10px;
   color: #a9a9a9;
   margin-top: 5px;
   margin-bottom: 14px;
@@ -1130,11 +1132,19 @@ input[type="range"]::-ms-fill-upper {
   padding: 0;
 }
 
+.page-other .site-footer .footer-logo {
+  float: right;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-image: url(/images/footer-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* lecture - 필터메뉴 */
 .page-lecture .lecture-filter {
   margin-top: 90px;
-  margin-right: -78px;
-  margin-left: -78px;
 }
 
 .page-lecture .lecture-filter .subtitle-wrapper {
@@ -1163,7 +1173,7 @@ input[type="range"]::-ms-fill-upper {
 
 .site-content .lecture-filter .btn-default {
   color: #333;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .site-content .lecture-filter .btn-default:not(:last-child) {
@@ -1187,7 +1197,7 @@ input[type="range"]::-ms-fill-upper {
   background: none;
   box-shadow: none;
   color: #333;
-  margin-top: 2px;
+  margin-top: 0px;
 }
 
 .site-content .lecture-filter .btn-default:not(:last-child):focus {
@@ -1203,39 +1213,52 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-content .lecture-filter .btn-group .dropdown-toggle {
-  padding: 14px 24px 14px 13px;
+  padding: 14px 18px 14px 13px;
   border-radius: 7px;
   border: 1px solid #eee;
-  margin-left: 7px;
+  margin-left: 11px;
 }
 .site-content .lecture-filter .btn-group .dropdown-toggle .caret {
-  margin-left: 67px;
+  margin-left: 64px;
+  border: none;
+  background-image: url(/images/equalize.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
 }
 
 .site-content .filter-list {
   margin-top: 47px;
-  margin-left: -78px;
-  margin-right: -78px;
   background-color: #eee;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 
 .site-content .filter-list .list-item {
   float: left;
 }
 
-.site-content .filter-list .reset-btn {
+.site-content .filter-list .btn-wrapper {
   float: right;
-  padding: 27px 28px;
+  padding: 27px 27px 27px 30px;
 }
 
-.site-content .filter-list .reset-btn .btn-reset {
-  padding: 15px 18px;
+.site-content .filter-list .btn-wrapper .btn-reset {
+  padding: 15px 24px;
   border-radius: 27px;
   color: #3e72ff;
   border: 2px solid #3e72ff;
   letter-spacing: -2px;
   font-size: 16px;
+}
+
+.site-content .filter-list .btn-wrapper .btn-reset:hover {
+  background-color: transparent;
+}
+
+.site-content .filter-list .btn-wrapper .btn-reset:focus {
+  outline: none;
 }
 
 .site-content .filter-list .list-item {
@@ -1266,14 +1289,30 @@ input[type="range"]::-ms-fill-upper {
 }
 
 /* lecture - 강의목록 */
+.page-other .lecture {
+  margin-left: -17px;
+  margin-right: -25px;
+}
 .site-content .lecture .more-btn {
   text-align: center;
+  margin-bottom: 97px;
 }
 
 .site-content .lecture .more-btn .btn-default {
   background-image: url(/images/more-btn.png);
   background-repeat: no-repeat;
   background-position: center;
-  width: 91px;
-  height: 113px;
+  width: 84px;
+  height: 84px;
+  padding: 0px;
+}
+
+.site-content .lecture .more-btn .btn-default:active {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.site-content .lecture .more-btn .btn-default:focus {
+  outline: none;
 }
