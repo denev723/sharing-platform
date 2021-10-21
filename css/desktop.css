@@ -849,6 +849,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture .item-list {
   margin-top: 38px;
+  margin-left: -2px;
 }
 
 .lecture .thumbnail {
@@ -984,23 +985,43 @@ input[type="range"]::-ms-fill-upper {
   padding-bottom: 133px;
 }
 
+.lecture-outro .item-img {
+  background-image: url(/images/outro-5.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: calc(164 / 766 * 100%);
+}
+
 .lecture-outro .item-wrapper {
   margin-top: 80px;
+  padding: 0px 57px 0px 40px;
 }
 
 .lecture-outro .item-wrapper .item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  padding: 0px 23px;
 }
 
 .lecture-outro .item-wrapper .item .btn-link {
   position: relative;
-  padding: 12px 32px 12px 15px;
+  padding: 13px 33px 13px 17px;
   border: 1px solid #ddd;
   border-radius: 27px;
   margin-top: 26px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.lecture-outro .item-wrapper .item .btn-link:nth-child(2) {
+  margin-left: 23px;
+}
+
+.lecture-outro .item-wrapper .item .btn-link:nth-child(3) {
+  margin-right: 4px;
 }
 
 .lecture-outro .item-wrapper .item .btn-link span {
@@ -1011,13 +1032,15 @@ input[type="range"]::-ms-fill-upper {
   width: 18px;
   height: 17px;
   position: absolute;
-  top: 14px;
+  top: 12px;
   right: 0;
   margin-right: 10px;
 }
 
 .lecture-outro .outro-img {
   margin-top: 82px;
+  margin-left: 8px;
+  margin-right: 16px;
 }
 
 .lecture-outro .outro-img > a {
@@ -1033,8 +1056,8 @@ input[type="range"]::-ms-fill-upper {
 
 /* 메인 - 스크롤버튼 */
 .scroll-btn {
-  position: absolute;
-  top: 1130px;
+  position: fixed;
+  bottom: 60px;
   right: 87px;
 }
 
