@@ -1142,16 +1142,16 @@ input[type="range"]::-ms-fill-upper {
   background-position: center;
 }
 
-/* lecture - 필터메뉴 */
-.page-lecture .lecture-filter {
+/* lecturelist - 필터메뉴 */
+.site-content .lecture-filter {
   margin-top: 90px;
 }
 
-.page-lecture .lecture-filter .subtitle-wrapper {
+.site-content .lecture-filter .subtitle-wrapper {
   float: left;
 }
 
-.page-lecture .lecture-filter .subtitle-wrapper .total {
+.site-content .lecture-filter .subtitle-wrapper .total {
   font-size: 44px;
   letter-spacing: -2px;
   font-weight: bold;
@@ -1288,7 +1288,7 @@ input[type="range"]::-ms-fill-upper {
   margin-left: 5px;
 }
 
-/* lecture - 강의목록 */
+/* lecture-list - 강의목록 */
 .page-other .lecture {
   margin-left: -17px;
   margin-right: -25px;
