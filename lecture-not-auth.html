@@ -22,7 +22,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="page-lecture page-other">
+  <body class="page-lecture page-lecture-not-auth page-other">
     <div id="wrap">
       <div class="site-header">
         <div class="site-logo">
@@ -110,11 +110,9 @@
             </div>
             <div class="video-wrapper">
               <div class="video-container">
-                <img
-                  src="/images/temps/video-player.png"
-                  width="100%"
-                  alt="video"
-                />
+                <img src="/images/temps/video-player.png" alt="video" />
+                <div class="application-box"></div>
+                <a href="#" class="application-btn"></a>
               </div>
               <div class="info-container">
                 <table class="table table-condensed info">
@@ -333,9 +331,9 @@
           <div class="site-footer row clearfix">
             <div class="footer-left">
               <div>
-                <a class="btn btn-link">개인정보처리방침</a>
-                <a class="btn btn-link">이용약관</a>
-                <a class="btn btn-link">저작권보호정책</a>
+                <a href="#" class="btn btn-link">개인정보처리방침</a>
+                <a href="#" class="btn btn-link">이용약관</a>
+                <a href="#" class="btn btn-link">저작권보호정책</a>
               </div>
               <address>
                 경기도 안산시 상록구 한양대학로 55 한양대학교 산업연협력관
@@ -533,11 +531,11 @@
           ><span class="sr-only">전체 메뉴</span>
         </a>
         <div class="menu-item">
-          <div style="display: flex; flex-direction: column">
-            <a href="#" class="btn btn-link">
+          <div>
+            <a href="lec-qna.html" class="btn btn-link">
               <span class="link-hover"></span>
               <span class="sr-only">강좌문의</span>
-            </span>
+            </a>
             <a href="#" class="btn btn-link">
               <span class="link-hover"></span>
               <span class="sr-only">마이페이지</span>

@@ -1,0 +1,21 @@
+/* 메인 */
+.site-content {
+  margin-left: 550px;
+}
+
+.site-header .lnb {
+  margin-left: 140px;
+}
+
+/* 메인 - search */
+.search-menu {
+  width: 460px;
+}
+
+.search-content .search-category .col-lg-4 {
+  width: 50%;
+}
+
+.search-content .search-category .col-lg-6 {
+  width: 100%;
+}
