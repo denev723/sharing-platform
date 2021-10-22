@@ -70,7 +70,7 @@ a:hover {
 }
 
 .search-menu .main {
-  background-image: url(/images/logo.png);
+  background-image: url(../images/logo.png);
 }
 
 .search-menu .search-sub {
@@ -81,7 +81,7 @@ a:hover {
 
 .search-menu .search-sub span {
   display: block;
-  background-image: url(/images/search-sub.png);
+  background-image: url(../images/search-sub.png);
   background-size: cover;
   background-position: center;
   padding-top: calc(163 / 336 * 100%);
@@ -115,7 +115,7 @@ a:hover {
 
 .search-content .input-lg::after {
   content: " ";
-  background-image: url(/images/search.png);
+  background-image: url(../images/search.png);
   display: block;
   width: 30px;
   height: 30px;
@@ -124,7 +124,7 @@ a:hover {
 }
 
 .search-content .input-wrapper .search-btn {
-  background-image: url(/images/search-blue.png);
+  background-image: url(../images/search-blue.png);
   background-position: center;
   background-size: cover;
   width: 20px;
@@ -331,7 +331,7 @@ input[type="range"]::-ms-fill-upper {
 
 .search-pop .search-icon {
   display: block;
-  background-image: url(/images/search.png);
+  background-image: url(../images/search.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -343,7 +343,7 @@ input[type="range"]::-ms-fill-upper {
 
 .search-pop .pop-icon {
   display: block;
-  background-image: url(/images/right-arrow.png);
+  background-image: url(../images/right-arrow.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -370,7 +370,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .side-left .menu-bar {
-  background-image: url(/images/menu-bar.png);
+  background-image: url(../images/menu-bar.png);
   width: 35px;
   height: 35px;
   background-size: cover;
@@ -398,53 +398,53 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .side-left .menu-item .btn-link:nth-child(1) {
-  background-image: url(/images/left-1.png);
+  background-image: url(../images/left-1.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(1):hover {
-  background-image: url(/images/left-1-hover.png);
+  background-image: url(../images/left-1-hover.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(1):hover .link-hover {
-  background-image: url(/images/link-hover-1.png);
+  background-image: url(../images/link-hover-1.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(2) {
-  background-image: url(/images/left-2.png);
+  background-image: url(../images/left-2.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(2):hover {
-  background-image: url(/images/left-2-hover.png);
+  background-image: url(../images/left-2-hover.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(2):hover .link-hover {
-  background-image: url(/images/link-hover-2.png);
+  background-image: url(../images/link-hover-2.png);
   left: -26px;
 }
 
 .side-left .menu-item .btn-link:nth-child(3) {
-  background-image: url(/images/left-3.png);
+  background-image: url(../images/left-3.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(3):hover {
-  background-image: url(/images/left-3-hover.png);
+  background-image: url(../images/left-3-hover.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(3):hover .link-hover {
-  background-image: url(/images/link-hover-3.png);
+  background-image: url(../images/link-hover-3.png);
   left: -23px;
 }
 
 .side-left .menu-item .btn-link:nth-child(4) {
-  background-image: url(/images/left-4.png);
+  background-image: url(../images/left-4.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(4):hover {
-  background-image: url(/images/left-4-hover.png);
+  background-image: url(../images/left-4-hover.png);
 }
 
 .side-left .menu-item .btn-link:nth-child(4):hover .link-hover {
-  background-image: url(/images/link-hover-4.png);
+  background-image: url(../images/link-hover-4.png);
 }
 
 .side-left .sns .btn-link {
@@ -454,15 +454,15 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .side-left .sns .btn-facebook {
-  background-image: url(/images/btn-facebook.png);
+  background-image: url(../images/btn-facebook.png);
 }
 
 .side-left .sns .btn-blog {
-  background-image: url(/images/btn-blog.png);
+  background-image: url(../images/btn-blog.png);
 }
 
 .side-left .sns .btn-youtube {
-  background-image: url(/images/btn-youtube.png);
+  background-image: url(../images/btn-youtube.png);
 }
 
 .side-right {
@@ -545,7 +545,7 @@ input[type="range"]::-ms-fill-upper {
 
 .side-right .btn-top {
   display: block;
-  background-image: url(/images/top-btn.png);
+  background-image: url(../images/top-btn.png);
   background-repeat: no-repeat;
   width: 24px;
   height: 31px;
@@ -574,7 +574,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-header .site-logo .main {
-  background-image: url(/images/logo-h.png);
+  background-image: url(../images/logo-h.png);
 }
 
 .site-header .lnb {
@@ -706,7 +706,7 @@ input[type="range"]::-ms-fill-upper {
 
 .notice .notice-title > a {
   display: inline-block;
-  background-image: url(/images/notice-title.png);
+  background-image: url(../images/notice-title.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -795,31 +795,31 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .content-category .item:nth-child(1) .icon {
-  background-image: url(/images/cate-1.png);
+  background-image: url(../images/cate-1.png);
 }
 
 .content-category .item:nth-child(2) .icon {
-  background-image: url(/images/cate-2.png);
+  background-image: url(../images/cate-2.png);
 }
 
 .content-category .item:nth-child(3) .icon {
-  background-image: url(/images/cate-3.png);
+  background-image: url(../images/cate-3.png);
 }
 
 .content-category .item:nth-child(4) .icon {
-  background-image: url(/images/cate-4.png);
+  background-image: url(../images/cate-4.png);
 }
 
 .content-category .item:nth-child(5) .icon {
-  background-image: url(/images/cate-5.png);
+  background-image: url(../images/cate-5.png);
 }
 
 .content-category .item:nth-child(6) .icon {
-  background-image: url(/images/cate-6.png);
+  background-image: url(../images/cate-6.png);
 }
 
 .content-category .item:nth-child(7) .icon {
-  background-image: url(/images/cate-7.png);
+  background-image: url(../images/cate-7.png);
 }
 
 .content-category .item .title {
@@ -848,7 +848,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .lecture .thumbnail .thumbnail-img .thumb-play {
-  background-image: url(/images/thumb-play.png);
+  background-image: url(../images/thumb-play.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 50px;
@@ -942,7 +942,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture .thumbnail .caption .info-wrapper .info .user {
   display: block;
-  background-image: url(/images/user.png);
+  background-image: url(../images/user.png);
   background-position: center;
   background-size: cover;
   width: 16px;
@@ -951,7 +951,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture .thumbnail .caption .info-wrapper .info .play {
   display: block;
-  background-image: url(/images/play.png);
+  background-image: url(../images/play.png);
   background-position: center;
   background-size: cover;
   width: 12px;
@@ -1013,7 +1013,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .lecture-outro .item-img {
-  background-image: url(/images/outro-5.png);
+  background-image: url(../images/outro-5.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1053,7 +1053,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture-outro .item-wrapper .item .btn-link span {
   display: block;
-  background-image: url(/images/right-arrow-b.png);
+  background-image: url(../images/right-arrow-b.png);
   background-position: center;
   background-size: cover;
   width: 18px;
@@ -1075,7 +1075,7 @@ input[type="range"]::-ms-fill-upper {
   width: 100%;
   height: 0;
   padding-top: calc(208 / 829 * 100%);
-  background-image: url("/images/outro-4.png");
+  background-image: url(../images/outro-4.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1091,7 +1091,7 @@ input[type="range"]::-ms-fill-upper {
 
 .scroll-btn span {
   display: block;
-  background-image: url(/images/scroll-btn.png);
+  background-image: url(../images/scroll-btn.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 102px;
@@ -1194,7 +1194,7 @@ input[type="range"]::-ms-fill-upper {
   display: block;
   width: 80px;
   height: 80px;
-  background-image: url(/images/footer-logo.png);
+  background-image: url(../images/footer-logo.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1278,7 +1278,7 @@ input[type="range"]::-ms-fill-upper {
 .site-content .lecture-filter .btn-group .dropdown-toggle .caret {
   margin-left: 64px;
   border: none;
-  background-image: url(/images/equalize.png);
+  background-image: url(../images/equalize.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;
@@ -1336,7 +1336,7 @@ input[type="range"]::-ms-fill-upper {
 
 .site-content .filter-list .list-item .del-btn {
   display: inline-block;
-  background-image: url(/images/del-btn.png);
+  background-image: url(../images/del-btn.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 19px;
@@ -1366,7 +1366,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-content .lecture .more-btn .btn-default {
-  background-image: url(/images/more-btn.png);
+  background-image: url(../images/more-btn.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 86px;
@@ -1425,7 +1425,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture-detail .title-wrapper .info-container .info .play {
   display: inline-block;
-  background-image: url(/images/play.png);
+  background-image: url(../images/play.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 12px;
@@ -1449,23 +1449,23 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .lecture-detail .title-wrapper .sns-group a:nth-child(5) {
-  background-image: url(/images/tweet-btn.png);
+  background-image: url(../images/tweet-btn.png);
 }
 
 .lecture-detail .title-wrapper .sns-group a:nth-child(4) {
-  background-image: url(/images/facebook-btn.png);
+  background-image: url(../images/facebook-btn.png);
 }
 
 .lecture-detail .title-wrapper .sns-group a:nth-child(3) {
-  background-image: url(/images/naver-btn.png);
+  background-image: url(../images/naver-btn.png);
 }
 
 .lecture-detail .title-wrapper .sns-group a:nth-child(2) {
-  background-image: url(/images/kakao-btn.png);
+  background-image: url(../images/kakao-btn.png);
 }
 
 .lecture-detail .title-wrapper .sns-group a:nth-child(1) {
-  background-image: url(/images/tabs-btn.png);
+  background-image: url(../images/tabs-btn.png);
 }
 
 /* lecture - video-wrapper */
@@ -1489,14 +1489,14 @@ input[type="range"]::-ms-fill-upper {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-image: url(/images/temps/video-no-auth.png);
+  background-image: url(../images/temps/video-no-auth.png);
   background-position: center;
   background-size: cover;
 }
 
 .lecture-detail .video-wrapper .video-container .application-btn {
   display: block;
-  background-image: url(/images/app-btn.png);
+  background-image: url(../images/app-btn.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 186px;
@@ -1507,7 +1507,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .lecture-detail .video-wrapper .video-container .application-btn:hover {
-  background-image: url(/images/app-btn-hover.png);
+  background-image: url(../images/app-btn-hover.png);
 }
 
 .lecture-detail .video-wrapper .info-container table {
@@ -1536,7 +1536,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture-detail .video-wrapper .info-container .sub-info .important-logo {
   display: inline-block;
-  background-image: url(/images/important.png);
+  background-image: url(../images/important.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1568,7 +1568,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture-detail .video-wrapper .info-container .btn-block .star-logo {
   display: inline-block;
-  background-image: url(/images/star-logo.png);
+  background-image: url(../images/star-logo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1589,7 +1589,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture-detail .intro-wrapper .title .title-img {
   display: inline-block;
-  background-image: url(/images/lec-intro.png);
+  background-image: url(../images/lec-intro.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 92px;
@@ -1612,7 +1612,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture-detail .lecture-list .title .title-img {
   display: inline-block;
-  background-image: url(/images/lec-list.png);
+  background-image: url(../images/lec-list.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 168px;
@@ -1651,27 +1651,27 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .lecture-detail .lecture-list .item-list a:nth-child(1) .left .lec-thumbnail {
-  background-image: url(/images/temps/lec-list-thumb-1.png);
+  background-image: url(../images/temps/lec-list-thumb-1.png);
 }
 
 .lecture-detail .lecture-list .item-list a:nth-child(2) .left .lec-thumbnail {
-  background-image: url(/images/temps/lec-list-thumb-2.png);
+  background-image: url(../images/temps/lec-list-thumb-2.png);
 }
 
 .lecture-detail .lecture-list .item-list a:nth-child(3) .left .lec-thumbnail {
-  background-image: url(/images/temps/lec-list-thumb-3.png);
+  background-image: url(../images/temps/lec-list-thumb-3.png);
 }
 
 .lecture-detail .lecture-list .item-list a:nth-child(4) .left .lec-thumbnail {
-  background-image: url(/images/temps/lec-list-thumb-4.png);
+  background-image: url(../images/temps/lec-list-thumb-4.png);
 }
 
 .lecture-detail .lecture-list .item-list a:nth-child(5) .left .lec-thumbnail {
-  background-image: url(/images/temps/lec-list-thumb-5.png);
+  background-image: url(../images/temps/lec-list-thumb-5.png);
 }
 
 .lecture-detail .lecture-list .item-list a:nth-child(6) .left .lec-thumbnail {
-  background-image: url(/images/temps/lec-list-thumb-6.png);
+  background-image: url(../images/temps/lec-list-thumb-6.png);
 }
 
 .lecture-detail .lecture-list .item-list .item .left .item-title {
@@ -1703,7 +1703,7 @@ input[type="range"]::-ms-fill-upper {
 
 .lecture-detail .lecture-list .item-list .item .right .play-btn {
   display: inline-block;
-  background-image: url(/images/play-round.png);
+  background-image: url(../images/play-round.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1717,7 +1717,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .lecture-detail .lecture-list .item-list a:hover .item .right .play-btn {
-  background-image: url(/images/play-round-hover.png);
+  background-image: url(../images/play-round-hover.png);
 }
 
 .lecture-detail .lecture-list .btn-wrapper {
@@ -1747,7 +1747,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-notice .site-content .page-title-wrapper .page-title {
-  background-image: url(/images/notice-page-title.png);
+  background-image: url(../images/notice-page-title.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 155px;
@@ -1799,7 +1799,7 @@ input[type="range"]::-ms-fill-upper {
 
 .page-notice .site-content .notice > ul li a .first .notice {
   display: inline-block;
-  background-image: url(/images/notice-subject.png);
+  background-image: url(../images/notice-subject.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 40px;
@@ -1838,28 +1838,28 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-notice .site-content .notice .pagination > li > .top {
-  background-image: url(/images/d-gt.png);
+  background-image: url(../images/d-gt.png);
   background-repeat: no-repeat;
   background-position: center;
   padding: 16px 16px;
 }
 
 .page-notice .site-content .notice .pagination > li > .prev {
-  background-image: url(/images/gt.png);
+  background-image: url(../images/gt.png);
   background-repeat: no-repeat;
   background-position: center;
   padding: 16px 16px;
 }
 
 .page-notice .site-content .notice .pagination > li > .next {
-  background-image: url(/images/lt.png);
+  background-image: url(../images/lt.png);
   background-repeat: no-repeat;
   background-position: center;
   padding: 16px 16px;
 }
 
 .page-notice .site-content .notice .pagination > li > .last {
-  background-image: url(/images/d-lt.png);
+  background-image: url(../images/d-lt.png);
   background-repeat: no-repeat;
   background-position: center;
   padding: 16px 16px;
@@ -1973,7 +1973,7 @@ input[type="range"]::-ms-fill-upper {
 
 .page-notice-content .wrapper .content .go-list-btn .btn {
   display: inline-block;
-  background-image: url(/images/go-list-btn.png);
+  background-image: url(../images/go-list-btn.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 190px;
@@ -1987,7 +1987,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-lec-qna .site-content .page-title-wrapper .page-title {
-  background-image: url(/images/lec-faq-title.png);
+  background-image: url(../images/lec-faq-title.png);
 }
 
 .page-lec-qna .site-content .content .content-sub {
@@ -1999,7 +1999,7 @@ input[type="range"]::-ms-fill-upper {
 
 .page-lec-qna .site-content .content .content-sub .sub-image {
   display: block;
-  background-image: url(/images/qna-sub-img.png);
+  background-image: url(../images/qna-sub-img.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 60px;
@@ -2035,7 +2035,7 @@ input[type="range"]::-ms-fill-upper {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: url(/images/dropdown.png) calc(100% - 20px) center no-repeat;
+  background: url(../images/dropdown.png) calc(100% - 20px) center no-repeat;
   right: 0px;
   background-color: #f8f8f8;
   color: #333;
@@ -2082,7 +2082,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-lec-qna .site-content .content form .btn-group .submit-btn {
-  background-image: url(/images/qna-submit.png);
+  background-image: url(../images/qna-submit.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 190px;
