@@ -379,7 +379,11 @@
               </div>
             </div>
           </div>
-          <div class="lecture lecture-new row" id="lecture-new">
+          <div
+            class="lecture lecture-new row"
+            id="lecture-new"
+            data-offset="50px"
+          >
             <p class="title">신규강좌</p>
             <div class="bg-wrap">
               <p class="title-bg-img"></p>
@@ -534,7 +538,11 @@
               </div>
             </div>
           </div>
-          <div class="lecture lecture-recommend row" id="lecture-recommend">
+          <div
+            class="lecture lecture-recommend row"
+            id="lecture-recommend"
+            data-offset="50px"
+          >
             <p class="title">추천강좌</p>
             <div class="bg-wrap">
               <p class="title-bg-img"></p>
@@ -689,7 +697,11 @@
               </div>
             </div>
           </div>
-          <div class="lecture lecture-outro row" id="lecture-outro">
+          <div
+            class="lecture lecture-outro row"
+            id="lecture-outro"
+            data-offset="50px"
+          >
             <p class="title">숫자로 보는 창업교육센터</p>
             <div class="bg-wrap">
               <p class="title-bg-img"></p>
@@ -899,13 +911,12 @@
             </div>
             <div class="search-period row">
               <p class="title">강좌기간 검색</p>
-              <input
-                type="range"
-                list="tickmarks"
-                min="0"
-                max="100"
-                step="50"
-              />
+              <input type="range" min="0" max="100" step="50" value="50" />
+              <div class="period-marks">
+                <span class="short"></span>
+                <span class="middle"></span>
+                <span class="long"></span>
+              </div>
               <div class="range-marks">
                 <span></span>
                 <span></span>

@@ -60,7 +60,14 @@ a:hover {
   position: absolute;
   top: 0;
   left: 90px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+.search-menu::-webkit-scrollbar {
+  display: none;
+}
+
 .search-menu.on {
   display: flex;
 }
@@ -185,6 +192,11 @@ a:hover {
   cursor: pointer;
 }
 
+.search-content .search-category .btn-category.active > div {
+  background-color: #fff;
+  color: #3e72ff;
+}
+
 .search-content .search-category .btn-category > div:hover {
   border: 1px solid #fff;
 }
@@ -209,10 +221,15 @@ a:hover {
   color: #afc5ff;
 }
 
+.search-period {
+  position: relative;
+}
+
 .search-period .title {
   font-size: 17px;
   margin-left: 5px;
   letter-spacing: -1px;
+  margin-bottom: 15px;
 }
 
 .search-content .btn-default {
@@ -225,7 +242,13 @@ a:hover {
 input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 50%,
+    rgb(130, 164, 255) 50%,
+    rgb(130, 164, 255) 100%
+  ); /* Otherwise white in Chrome */
   z-index: 9;
 }
 
@@ -271,7 +294,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 2px;
   cursor: pointer;
-  background: #82a4ff;
   border-radius: 1.3px;
 }
 
@@ -312,7 +334,36 @@ input[type="range"]::-ms-fill-upper {
   background-color: #82a4ff;
 }
 
-.search-period > div {
+.search-period .period-marks span {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 46px;
+  position: absolute;
+}
+
+.search-period .period-marks .short {
+  background-image: url(../images/search-period-1.png);
+  top: -10px;
+  left: -16px;
+  display: none;
+}
+
+.search-period .period-marks .middle {
+  background-image: url(../images/search-period-2.png);
+  top: -10px;
+  left: 177px;
+}
+
+.search-period .period-marks .long {
+  background-image: url(../images/search-period-3.png);
+  top: -10px;
+  right: -16px;
+  display: none;
+}
+
+.search-period .range-marks,
+.search-period .range-content {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
@@ -399,6 +450,11 @@ input[type="range"]::-ms-fill-upper {
   height: 35px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.side-left .sitemap-open:active {
+  border: none;
+  outline: none;
 }
 
 .side-left .menu-item > div {
@@ -513,8 +569,13 @@ input[type="range"]::-ms-fill-upper {
   background-image: url(../images/sitemap-close.png);
   width: calc(55px / 2);
   height: 27px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 30px;
+}
+
+.site-map .sitemap-close:active {
+  border: none;
+  outline: none;
 }
 
 .site-map .wrapper {
@@ -965,6 +1026,34 @@ input[type="range"]::-ms-fill-upper {
   padding: 5px 48px 13px 62px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  position: relative;
+}
+
+.content-category::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 141px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-left-radius: 60px;
+  background-color: #eee;
+  opacity: 0.8;
+}
+
+.content-category::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 141px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background-color: #eee;
+  opacity: 0.8;
 }
 
 .content-category::-webkit-scrollbar {
@@ -1232,7 +1321,8 @@ input[type="range"]::-ms-fill-upper {
   cursor: pointer;
 }
 
-.rt-category .category-item:hover {
+.rt-category .category-item:hover,
+.rt-category .category-item.active {
   background-color: #3e72ff;
   color: #fff;
 }
@@ -1408,7 +1498,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-other .search-menu.on ~ .search-pop {
-  left: 640px;
+  left: 639px;
   transition: left 0.2s ease-in-out;
 }
 
