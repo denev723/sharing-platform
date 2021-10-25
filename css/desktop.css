@@ -586,14 +586,14 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-map .nav {
-  width: 350px;
+  width: 370px;
   margin: auto;
   margin-top: 56px;
   padding: 30px 40px;
 }
 
 .site-map .bg {
-  width: calc(100% - 350px);
+  width: calc(100% - 370px);
   background-color: #333;
   opacity: 0.3;
 }
@@ -673,7 +673,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-map .nav > li > a ~ ul > li > a > span:nth-child(2) {
-  padding-left: 0px;
+  padding-left: 10px;
 }
 
 .site-map .nav > li:nth-child(1) .depth .depth-child-1 a .icon {
@@ -815,8 +815,9 @@ input[type="range"]::-ms-fill-upper {
   display: block;
   background-image: url(../images/top-btn.png);
   background-repeat: no-repeat;
+  background-position: center center;
   width: 24px;
-  height: 31px;
+  height: 24px;
   cursor: pointer;
 }
 
@@ -895,14 +896,28 @@ input[type="range"]::-ms-fill-upper {
   padding: 0;
   position: absolute;
   top: 48px;
-  left: 10px;
-  display: flex;
+  left: 13px;
+  display: none;
   width: max-content;
   font-size: 13px;
 }
 
-.lnb .nav .depth > li {
-  padding: 0px 6px;
+.lnb.over .nav .depth {
+  display: flex;
+}
+
+.lnb .nav .depth > li > a {
+  padding: 11px 10px;
+}
+
+.lnb .nav .depth > li > a:hover {
+  color: #3e72ff;
+}
+
+.lnb .nav .depth > li > a:focus,
+.lnb .nav .depth > li > a:active {
+  color: #3e72ff;
+  text-decoration: none;
 }
 
 .gnb {
@@ -1443,12 +1458,37 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .scroll-btn span {
+  position: relative;
   display: block;
-  background-image: url(../images/scroll-btn.png);
+  background-image: url(../images/scroll.png);
   background-position: center;
   background-repeat: no-repeat;
   width: 102px;
   height: 45px;
+}
+
+.scroll-btn span::before {
+  content: " ";
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  background-color: #2b5680;
+  left: 24px;
+  top: 18px;
+  border-radius: 50%;
+  animation: mouse 2s infinite;
+  opacity: 1;
+}
+
+@keyframes mouse {
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 43px;
+    opacity: 0;
+  }
 }
 
 /* @media screen and (max-width: 1760px) {

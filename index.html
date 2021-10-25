@@ -83,7 +83,7 @@
             </a>
             <a href="#" class="btn btn-link" href="#"> 로그인 </a>
             <a href="#" class="btn btn-link" href="#"> 회원가입 </a>
-            <a href="#" class="btn btn-link" href="#"> 공지사항 </a>
+            <a href="#" class="btn btn-link" href="./notice.html"> 공지사항 </a>
           </div>
         </div>
       </div>
@@ -911,7 +911,14 @@
             </div>
             <div class="search-period row">
               <p class="title">강좌기간 검색</p>
-              <input type="range" min="0" max="100" step="50" value="50" />
+              <input
+                class="period-slider"
+                type="range"
+                min="0"
+                max="100"
+                step="50"
+                value="50"
+              />
               <div class="period-marks">
                 <span class="short"></span>
                 <span class="middle"></span>
@@ -993,7 +1000,7 @@
         </div>
       </div>
     </div>
-    <div class="site-map" id="site-map">
+    <div class="site-map">
       <span></span>
       <div class="wrapper">
         <div class="btn-wrapper">
@@ -1002,11 +1009,11 @@
         <ul class="nav">
           <li class="row">
             <a href="#"> <span class="sr-only">센터소개</span></a>
-            <ul class="depth col-lg-12 clearfix">
-              <li class="depth-child-1 col-lg-6">
+            <ul class="depth col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+              <li class="depth-child-1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"><span class="icon"></span><span>센터소개</span></a>
               </li>
-              <li class="depth-child-2 col-lg-6">
+              <li class="depth-child-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="./participating-univ.html"
                   ><span class="icon"></span><span>참여대학</span></a
                 >
@@ -1017,8 +1024,8 @@
             <a href="./lecturelist.html"
               ><span class="sr-only">강좌찾기</span></a
             >
-            <ul class="depth col-lg-12 clearfix">
-              <li class="depth-child-1 col-lg-6">
+            <ul class="depth col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+              <li class="depth-child-1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"
                   ><span class="icon"></span><span>전체강좌보기</span></a
                 >
@@ -1027,21 +1034,21 @@
           </li>
           <li class="row">
             <a href="./notice.html"><span class="sr-only">커뮤니티</span></a>
-            <ul class="depth col-lg-12 clearfix">
-              <li class="depth-child-1 col-lg-6">
+            <ul class="depth col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+              <li class="depth-child-1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="./notice.html"
                   ><span class="icon"></span><span>공지사항</span></a
                 >
               </li>
-              <li class="depth-child-2 col-lg-6">
+              <li class="depth-child-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="./lec-qna.html"
                   ><span class="icon"></span><span>강좌문의</span></a
                 >
               </li>
-              <li class="depth-child-3 col-lg-6">
+              <li class="depth-child-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"><span class="icon"></span><span>FAQ</span></a>
               </li>
-              <li class="depth-child-4 col-lg-6">
+              <li class="depth-child-4 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"
                   ><span class="icon"></span><span>이용가이드</span></a
                 >
@@ -1050,19 +1057,19 @@
           </li>
           <li class="row">
             <a href="./notice.html"><span class="sr-only">회원</span></a>
-            <ul class="depth col-lg-12 clearfix">
-              <li class="depth-child-1 col-lg-6">
+            <ul class="depth col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+              <li class="depth-child-1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"><span class="icon"></span><span>로그인</span></a>
               </li>
-              <li class="depth-child-2 col-lg-6">
+              <li class="depth-child-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"><span class="icon"></span><span>회원가입</span></a>
               </li>
-              <li class="depth-child-3 col-lg-6">
+              <li class="depth-child-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"
                   ><span class="icon"></span><span>아이디찾기</span></a
                 >
               </li>
-              <li class="depth-child-4 col-lg-6">
+              <li class="depth-child-4 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"
                   ><span class="icon"></span><span>비밀번호찾기</span></a
                 >
@@ -1071,18 +1078,18 @@
           </li>
           <li class="row">
             <a href="#"><span class="sr-only">마이페이지</span></a>
-            <ul class="depth col-lg-12 clearfix">
-              <li class="depth-child-1 col-lg-6">
+            <ul class="depth col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+              <li class="depth-child-1 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="./notice.html"
                   ><span class="icon"></span><span>수강신청내역</span></a
                 >
               </li>
-              <li class="depth-child-2 col-lg-6">
+              <li class="depth-child-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"
                   ><span class="icon"></span><span>수강증명서</span></a
                 >
               </li>
-              <li class="depth-child-3 col-lg-6">
+              <li class="depth-child-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <a href="#"
                   ><span class="icon"></span><span>회원정보수정</span></a
                 >
@@ -1131,6 +1138,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/lnb.js"></script>
   </body>
 </html>

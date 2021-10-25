@@ -1,27 +1,5 @@
-// const searchCategories = document.querySelectorAll(".btn-category");
-// const rtCategorories = document.querySelectorAll(".category-item");
-
-// rtCategorories.forEach((rtCategory) =>
-//   rtCategory.addEventListener("click", function () {
-//     if (rtCategory.classList.contains("active")) {
-//       rtCategory.classList.remove("active");
-//     } else {
-//       rtCategory.classList.add("active");
-//     }
-//   }),
-// );
-
-// searchCategories.forEach((searchCategory) =>
-//   searchCategory.addEventListener("click", function () {
-//     if (searchCategory.classList.contains("active")) {
-//       searchCategory.classList.remove("active");
-//     } else {
-//       searchCategory.classList.add("active");
-//     }
-//   }),
-// );
-
 $(function () {
+  // 준비중
   $("a[href='#']").each(function (index, item) {
     item.addEventListener("click", alertLink);
   });
@@ -30,6 +8,7 @@ $(function () {
     alert("준비중입니다.");
   }
 
+  // right-menu
   $(".btn-dot").hover(
     function () {
       // over
@@ -41,6 +20,7 @@ $(function () {
     },
   );
 
+  // site-map
   $(".sitemap-open").on("click", function () {
     $(".site-map").addClass("on");
   });
@@ -109,6 +89,7 @@ $(function () {
     });
   });
 
+  // period-range
   $("input[type=range]").on("input", function () {
     var val = $(this).val();
     $(this).css(
@@ -119,12 +100,33 @@ $(function () {
         val +
         "%, #82a4ff 100%)",
     );
-    showPeriod(val);
   });
 
-  function showPeriod(sVal) {
-    if (sVal === 0) {
-      $(".short").addClass("on");
+  $(".period-slider").on("input", function () {
+    if ($(this).val() === "0") {
+      $(".short").css({ display: "block" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "none" });
+    } else if ($(this).val() === "50") {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "block" });
+      $(".long").css({ display: "none" });
+    } else {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "block" });
     }
-  }
+  });
+
+  $(".lnb .nav > li, .depth > a").on("mouseover", function () {
+    $(".lnb").addClass("over");
+  });
+
+  $(".lnb .nav").on({
+    mouseleave: function () {
+      setTimeout(function () {
+        $(".lnb").removeClass("over");
+      }, 1000);
+    },
+  });
 });
