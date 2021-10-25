@@ -13,8 +13,23 @@
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
+    />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/desktop.css" rel="stylesheet" />
+    <link
+      href="css/tablet.css"
+      rel="stylesheet"
+      media="screen and (max-width: 1350px)"
+    />
+    <link
+      href="css/phone.css"
+      rel="stylesheet"
+      media="screen and (max-width: 1250px)"
+    />
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
     <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
     <!--[if lt IE 9]>
@@ -37,7 +52,7 @@
                   <a href="#"><span>센터소개</span></a>
                 </li>
                 <li>
-                  <a href="./participating-univ.html"><span>참여기관</span></a>
+                  <a href="./participating-univ.html"><span>참여대학</span></a>
                 </li>
               </ul>
             </li>
@@ -52,7 +67,7 @@
                   <a href="./notice.html"><span>공지사항</span></a>
                 </li>
                 <li>
-                  <a href="./lec-faq.html"><span>강의문의</span></a>
+                  <a href="./lec-qna.html"><span>강좌문의</span></a>
                 </li>
                 <li>
                   <a href="#"><span>FAQ</span></a>
@@ -91,7 +106,7 @@
               <span>수강가능</span>
             </div>
             <div class="title-wrapper row clearfix">
-              <div class="info-container col-lg-8">
+              <div class="info-container col-lg-7">
                 <h2 class="title">3D 프린팅 기술의 현재와 미래</h2>
                 <div class="info">
                   <span>2021-10-07</span>
@@ -100,7 +115,7 @@
                   <span>1,128</span>
                 </div>
               </div>
-              <div class="sns-group col-lg-4">
+              <div class="sns-group col-lg-5">
                 <a href="#" class="btn btn-link btn-sm"></a>
                 <a href="#" class="btn btn-link btn-sm"></a>
                 <a href="#" class="btn btn-link btn-sm"></a>
@@ -108,13 +123,10 @@
                 <a href="#" class="btn btn-link btn-sm"></a>
               </div>
             </div>
-            <div class="video-wrapper">
+            <div class="video-wrapper clearfix">
               <div class="video-container">
-                <img
-                  src="./images/temps/video-player.png"
-                  width="100%"
-                  alt="video"
-                />
+                <div class="application-box"></div>
+                <a href="#" class="application-btn"></a>
               </div>
               <div class="info-container">
                 <table class="table table-condensed info">
@@ -333,9 +345,9 @@
           <div class="site-footer row clearfix">
             <div class="footer-left">
               <div>
-                <a class="btn btn-link">개인정보처리방침</a>
-                <a class="btn btn-link">이용약관</a>
-                <a class="btn btn-link">저작권보호정책</a>
+                <a href="#" class="btn btn-link">개인정보처리방침</a>
+                <a href="#" class="btn btn-link">이용약관</a>
+                <a href="#" class="btn btn-link">저작권보호정책</a>
               </div>
               <address>
                 경기도 안산시 상록구 한양대학로 55 한양대학교 산업연협력관
@@ -349,183 +361,186 @@
         </div>
       </div>
       <div class="search-menu">
-        <div class="site-logo">
-          <a class="main" href="./index.html"></a>
-        </div>
-        <div class="search-sub">
-          <span></span>
-        </div>
-        <div class="search-content">
-          <form>
-            <div class="input-wrapper row">
-              <input
-                type="text"
-                name="search"
-                id="search"
-                class="form-class input-lg"
-                placeholder="강좌/강사명을 검색해주세요"
-              />
-              <button type="submit" class="search-btn"></button>
-            </div>
-            <div class="search-category row">
-              <p class="title">대학별 검색</p>
-              <div class="btn-category col-md-4 col-xs-6">
-                <div class="col-md-12">
-                  <span class="category-title">경희대</span>
-                  <span>1,028</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-6">
-                <div class="col-md-12">
-                  <span class="category-title">동국대</span>
-                  <span class="category-number">67</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-6">
-                <div class="col-md-12">
-                  <span class="category-title">산기대</span>
-                  <span class="category-number">205</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-6">
-                <div class="col-md-12">
-                  <span class="category-title">성균관대</span>
-                  <span class="category-number">302</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-6">
-                <div class="col-md-12">
-                  <span class="category-title">아주대</span>
-                  <span class="category-number">84</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-6">
-                <div class="col-md-12">
-                  <span class="category-title">한양대ERICA</span>
-                  <span class="category-number">1,783</span>
-                </div>
-              </div>
-            </div>
-            <div class="search-category row">
-              <p class="title">분류별 검색(대학별 특화 & 산업분류)</p>
-              <div class="btn-category col-md-6 col-xs-12">
-                <div class="col-md-12">
-                  <span class="category-title">미디어문화, ICT IOT</span>
-                  <span class="category-number">106</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-6 col-xs-12">
-                <div class="col-md-12">
-                  <span class="category-title">엔터테인먼트 창업</span>
-                  <span class="category-number">832</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-6 col-xs-12">
-                <div class="col-md-12">
-                  <span class="category-title">신재생에너지, 바이오헬스</span>
-                  <span class="category-number">82</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-6 col-xs-12">
-                <div class="col-md-12">
-                  <span class="category-title">3D프린터, 소셜벤처</span>
-                  <span class="category-number">1,012</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-6 col-xs-12">
-                <div class="col-md-12">
-                  <span class="category-title">미정</span>
-                  <span class="category-number">0</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-6 col-xs-12">
-                <div class="col-md-12">
-                  <span class="category-title">미정</span>
-                  <span class="category-number">0</span>
-                </div>
-              </div>
-            </div>
-            <div class="search-category row">
-              <p class="title">필수강좌 검색</p>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">기업가정신</span>
-                  <span class="category-number">1,052</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">비즈니스모델</span>
-                  <span class="category-number">104</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">사업계획서</span>
-                  <span class="category-number">809</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">지식재산권</span>
-                  <span class="category-number">120</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">마케팅/판로</span>
-                  <span class="category-number">95</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">세무/회계</span>
-                  <span class="category-number">122</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">법률/노무</span>
-                  <span class="category-number">78</span>
-                </div>
-              </div>
-              <div class="btn-category col-md-4 col-xs-4">
-                <div class="col-md-12">
-                  <span class="category-title">투자관련</span>
-                  <span class="category-number">107</span>
-                </div>
-              </div>
-            </div>
-            <div class="search-period row">
-              <p class="title">강좌기간 검색</p>
-              <input
-                type="range"
-                list="tickmarks"
-                min="0"
-                max="100"
-                step="50"
-              />
-              <div class="range-marks">
-                <span></span>
-                <span></span>
-              </div>
-              <div class="range-content">
-                <span>1~6주</span>
-                <span>7~12주</span>
-                <span>13주</span>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-default">강좌검색</button>
-          </form>
-        </div>
-        <div class="search-pop">
-          <div>
-            <span class="search-icon"></span>
-            <span>강좌<br />찾기</span>
+        <div class="wrapper">
+          <div class="site-logo">
+            <a class="main" href="./index.html"></a>
           </div>
-          <div>
-            <span class="pop-icon"></span>
+          <div class="search-sub">
+            <span></span>
           </div>
+          <div class="search-content">
+            <form>
+              <div class="input-wrapper row">
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  class="form-class input-lg"
+                  placeholder="강좌/강사명을 검색해주세요"
+                />
+                <button type="submit" class="search-btn"></button>
+              </div>
+              <div class="search-category row">
+                <p class="title">대학별 검색</p>
+                <div class="btn-category col-md-4 col-xs-6">
+                  <div class="col-md-12">
+                    <span class="category-title">경희대</span>
+                    <span class="category-number">1,028</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-6">
+                  <div class="col-md-12">
+                    <span class="category-title">동국대</span>
+                    <span class="category-number">67</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-6">
+                  <div class="col-md-12">
+                    <span class="category-title">산기대</span>
+                    <span class="category-number">205</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-6">
+                  <div class="col-md-12">
+                    <span class="category-title">성균관대</span>
+                    <span class="category-number">302</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-6">
+                  <div class="col-md-12">
+                    <span class="category-title">아주대</span>
+                    <span class="category-number">84</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-6">
+                  <div class="col-md-12">
+                    <span class="category-title">한양대ERICA</span>
+                    <span class="category-number">1,783</span>
+                  </div>
+                </div>
+              </div>
+              <div class="search-category row">
+                <p class="title">분류별 검색(대학별 특화 & 산업분류)</p>
+                <div class="btn-category col-md-6 col-xs-12">
+                  <div class="col-md-12">
+                    <span class="category-title">미디어문화, ICT, IOT</span>
+                    <span class="category-number">106</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-6 col-xs-12">
+                  <div class="col-md-12">
+                    <span class="category-title">엔터테인먼트 창업</span>
+                    <span class="category-number">832</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-6 col-xs-12">
+                  <div class="col-md-12">
+                    <span class="category-title">신재생에너지, 바이오헬스</span>
+                    <span class="category-number">82</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-6 col-xs-12">
+                  <div class="col-md-12">
+                    <span class="category-title">3D프린터, 소셜벤처</span>
+                    <span class="category-number">1,012</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-6 col-xs-12">
+                  <div class="col-md-12">
+                    <span class="category-title">미정</span>
+                    <span class="category-number">0</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-6 col-xs-12">
+                  <div class="col-md-12">
+                    <span class="category-title">미정</span>
+                    <span class="category-number">0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="search-category row">
+                <p class="title">필수강좌 검색</p>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">기업가정신</span>
+                    <span class="category-number">1,052</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">비즈니스모델</span>
+                    <span class="category-number">104</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">사업계획서</span>
+                    <span class="category-number">809</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">지식재산권</span>
+                    <span class="category-number">120</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">마케팅/판로</span>
+                    <span class="category-number">95</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">세무/회계</span>
+                    <span class="category-number">122</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">법률/노무</span>
+                    <span class="category-number">78</span>
+                  </div>
+                </div>
+                <div class="btn-category col-md-4 col-xs-4">
+                  <div class="col-md-12">
+                    <span class="category-title">투자관련</span>
+                    <span class="category-number">107</span>
+                  </div>
+                </div>
+              </div>
+              <div class="search-period row">
+                <p class="title">강좌기간 검색</p>
+                <input
+                  type="range"
+                  list="tickmarks"
+                  min="0"
+                  max="100"
+                  step="50"
+                />
+                <div class="range-marks">
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="range-content">
+                  <span>1~6주</span>
+                  <span>7~12주</span>
+                  <span>13주</span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-default">강좌검색</button>
+            </form>
+          </div>
+        </div>
+        <div class="bg"></div>
+      </div>
+      <div class="search-pop">
+        <div>
+          <span class="search-icon"></span>
+          <span>강좌<br />찾기</span>
+        </div>
+        <div>
+          <span class="pop-icon"></span>
         </div>
       </div>
       <div class="side-left">
@@ -533,11 +548,11 @@
           ><span class="sr-only">전체 메뉴</span>
         </a>
         <div class="menu-item">
-          <div style="display: flex; flex-direction: column">
-            <a href="#" class="btn btn-link">
+          <div>
+            <a href="./lec-qna.html" class="btn btn-link">
               <span class="link-hover"></span>
               <span class="sr-only">강좌문의</span>
-            </span>
+            </a>
             <a href="#" class="btn btn-link">
               <span class="link-hover"></span>
               <span class="sr-only">마이페이지</span>
@@ -546,7 +561,7 @@
               <span class="link-hover"></span>
               <span class="sr-only">이용가이드</span>
             </a>
-            <a href="./notice.html" class="btn btn-link">
+            <a href="notice.html" class="btn btn-link">
               <span class="link-hover"></span>
               <span class="sr-only">공지사항</span>
             </a>

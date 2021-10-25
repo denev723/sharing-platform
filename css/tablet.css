@@ -1,21 +1,30 @@
 /* 메인 */
-.site-content {
+.page-main .site-content {
   margin-left: 550px;
 }
 
-.site-header .lnb {
+.page-main .site-header .lnb {
   margin-left: 140px;
 }
 
 /* 메인 - search */
-.search-menu {
+.search-menu .wrapper {
   width: 460px;
 }
 
-.search-content .search-category .col-lg-4 {
+.search-content .search-category .col-md-4,
+.page-other .search-content .search-category .col-md-4 {
   width: 50%;
 }
 
-.search-content .search-category .col-lg-6 {
+.search-content .search-category .col-md-6,
+.page-other .search-content .search-category .col-md-6 {
   width: 100%;
 }
+
+/* 메인 - outro */
+.lecture-outro .item-wrapper .item {
+  padding: 0px 4px 0px 16px;
+}
+
+/* 메인제외 - search-menu */

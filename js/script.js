@@ -40,4 +40,12 @@ $(function () {
       $(this).prev().css("display", "none");
     },
   );
+
+  $(".search-pop").on("click", function () {
+    if ($(".search-menu").hasClass("on")) {
+      $(".search-menu").removeClass("on");
+    } else {
+      $(".search-menu").addClass("on");
+    }
+  });
 });
