@@ -118,7 +118,11 @@ $(function () {
     }
   });
 
-  $(".lnb .nav > li, .depth > a").on("mouseover", function () {
+  $(".lnb .nav > li").on("mouseover", function () {
+    $(".lnb").addClass("over");
+  });
+
+  $(".lnb .depth a").on("mouseover", function () {
     $(".lnb").addClass("over");
   });
 
