@@ -17,11 +17,11 @@
     />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/desktop.css" rel="stylesheet" />
-    <link
+    <!-- <link
       href="css/tablet.css"
       rel="stylesheet"
       media="screen and (max-width: 1350px)"
-    />
+    /> -->
     <link
       href="css/phone.css"
       rel="stylesheet"
@@ -34,7 +34,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="page-main">
+  <body class="page-main clearfix">
     <div id="wrap">
       <div class="site-header">
         <div class="site-logo">
@@ -729,7 +729,7 @@
               <a href="#"></a>
             </div>
           </div>
-          <div class="site-footer-mb site-footer메 row clearfix">
+          <div class="site-footer-mb site-footer row clearfix">
             <div class="footer-left">
               <div>
                 <a href="#" class="btn btn-link">개인정보처리방침</a>
@@ -920,6 +920,19 @@
           </form>
         </div>
       </div>
+      <div class="site-footer row clearfix">
+        <div class="footer-left">
+          <div>
+            <a href="#" class="btn btn-link">개인정보처리방침</a>
+            <a href="#" class="btn btn-link">이용약관</a>
+            <a href="#" class="btn btn-link">저작권보호정책</a>
+          </div>
+          <address>
+            경기도 안산시 상록구 한양대학로 55 한양대학교 산업연협력관 204호<br />
+            Copyright&copy; HBI Hanyang University, ltd. All rights reserved.
+          </address>
+        </div>
+      </div>
       <div class="bg"></div>
     </div>
     <div class="search-pop">
@@ -969,78 +982,99 @@
         </div>
       </div>
     </div>
-    <div class="site-map">
+    <div class="site-map" id="site-map">
+      <span></span>
       <div class="wrapper">
         <div class="btn-wrapper">
           <button class="btn btn-link sitemap-close"></button>
         </div>
         <ul class="nav">
-          <li>
+          <li class="row">
             <a href="#"> <span class="sr-only">센터소개</span></a>
-            <ul class="depth">
-              <li>
-                <a href="#"><span>센터소개</span></a>
+            <ul class="depth col-lg-12 clearfix">
+              <li class="depth-child-1 col-lg-6">
+                <a href="#"><span class="icon"></span><span>센터소개</span></a>
               </li>
-              <li>
-                <a href="./participating-univ.html"><span>참여대학</span></a>
+              <li class="depth-child-2 col-lg-6">
+                <a href="./participating-univ.html"
+                  ><span class="icon"></span><span>참여대학</span></a
+                >
               </li>
             </ul>
           </li>
-          <li>
+          <li class="row">
             <a href="./lecturelist.html"
               ><span class="sr-only">강좌찾기</span></a
             >
-            <ul class="depth">
-              <li>
-                <a href="#"><span>전체강좌보기</span></a>
+            <ul class="depth col-lg-12 clearfix">
+              <li class="depth-child-1 col-lg-6">
+                <a href="#"
+                  ><span class="icon"></span><span>전체강좌보기</span></a
+                >
               </li>
             </ul>
           </li>
-          <li>
+          <li class="row">
             <a href="./notice.html"><span class="sr-only">커뮤니티</span></a>
-            <ul class="depth">
-              <li>
-                <a href="./notice.html"><span>공지사항</span></a>
+            <ul class="depth col-lg-12 clearfix">
+              <li class="depth-child-1 col-lg-6">
+                <a href="./notice.html"
+                  ><span class="icon"></span><span>공지사항</span></a
+                >
               </li>
-              <li>
-                <a href="./lec-qna.html"><span>강좌문의</span></a>
+              <li class="depth-child-2 col-lg-6">
+                <a href="./lec-qna.html"
+                  ><span class="icon"></span><span>강좌문의</span></a
+                >
               </li>
-              <li>
-                <a href="#"><span>FAQ</span></a>
+              <li class="depth-child-3 col-lg-6">
+                <a href="#"><span class="icon"></span><span>FAQ</span></a>
               </li>
-              <li>
-                <a href="#"><span>이용가이드</span></a>
+              <li class="depth-child-4 col-lg-6">
+                <a href="#"
+                  ><span class="icon"></span><span>이용가이드</span></a
+                >
               </li>
             </ul>
           </li>
-          <li>
+          <li class="row">
             <a href="./notice.html"><span class="sr-only">회원</span></a>
-            <ul class="depth">
-              <li>
-                <a href="#"><span>로그인</span></a>
+            <ul class="depth col-lg-12 clearfix">
+              <li class="depth-child-1 col-lg-6">
+                <a href="#"><span class="icon"></span><span>로그인</span></a>
               </li>
-              <li>
-                <a href="#"><span>회원가입</span></a>
+              <li class="depth-child-2 col-lg-6">
+                <a href="#"><span class="icon"></span><span>회원가입</span></a>
               </li>
-              <li>
-                <a href="#"><span>아이디찾기</span></a>
+              <li class="depth-child-3 col-lg-6">
+                <a href="#"
+                  ><span class="icon"></span><span>아이디찾기</span></a
+                >
               </li>
-              <li>
-                <a href="#"><span>비밀번호찾기</span></a>
+              <li class="depth-child-4 col-lg-6">
+                <a href="#"
+                  ><span class="icon"></span><span>비밀번호찾기</span></a
+                >
               </li>
             </ul>
           </li>
-          <li>
+          <li class="row">
             <a href="#"><span class="sr-only">마이페이지</span></a>
-            <ul class="depth">
-              <li>
-                <a href="./notice.html"><span>수강신청내역</span></a>
+            <ul class="depth col-lg-12 clearfix">
+              <li class="depth-child-1 col-lg-6">
+                <a href="./notice.html"
+                  ><span class="icon"></span><span>수강신청내역</span></a
+                >
               </li>
-              <li>
-                <a href="#"><span>수강증명서</span></a>
+              <li class="depth-child-2 col-lg-6">
+                <a href="#"
+                  ><span class="icon"></span><span>수강증명서</span></a
+                >
               </li>
-              <li>
-                <a href="#"><span>회원정보수정</span></a>
+              <li class="depth-child-3 col-lg-6">
+                <a href="#"
+                  ><span class="icon"></span><span>회원정보수정</span></a
+                >
               </li>
             </ul>
           </li>

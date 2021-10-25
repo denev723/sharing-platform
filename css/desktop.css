@@ -1,6 +1,7 @@
 /* 공통 */
 body {
   font-family: "Nanum Gothic";
+  min-width: 1920px;
 }
 
 /* .gothic {
@@ -490,12 +491,19 @@ input[type="range"]::-ms-fill-upper {
 
 /* sitemap */
 .site-map {
-  width: 550px;
-  position: absolute;
+  display: none;
+}
+.site-map.on {
+  display: block;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9;
   background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: transparent;
 }
 
 .site-map .sitemap-close {
@@ -503,59 +511,164 @@ input[type="range"]::-ms-fill-upper {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/sitemap-close.png);
-  width: 55px;
-  height: 54px;
+  width: calc(55px / 2);
+  height: 27px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.site-map .wrapper {
+  padding: 0;
+  flex: 1;
+  background-color: #fff;
+  overflow-y: scroll;
 }
 
 .site-map .nav {
-  padding: 0;
-  width: 450px;
+  width: 350px;
   margin: auto;
+  margin-top: 56px;
+  padding: 30px 40px;
+}
+
+.site-map .bg {
+  width: calc(100% - 350px);
+  background-color: #333;
+  opacity: 0.3;
+}
+
+.site-map .nav > li {
+  border-bottom: 1px solid #d5d8df;
+  margin-bottom: 30px;
 }
 
 .site-map .nav > li:nth-child(1) > a {
   background-image: url(../images/sitemap-title-1.png);
   background-position: center;
   background-repeat: no-repeat;
-  width: 208px;
-  height: 45px;
+  background-size: cover;
+  width: calc(210px / 2);
+  height: 23px;
 }
 
 .site-map .nav > li:nth-child(2) > a {
   background-image: url(../images/sitemap-title-2.png);
   background-position: center;
   background-repeat: no-repeat;
-  width: 208px;
-  height: 46px;
+  background-size: cover;
+  width: calc(210px / 2);
+  height: 23px;
 }
 
 .site-map .nav > li:nth-child(3) > a {
   background-image: url(../images/sitemap-title-3.png);
   background-position: center;
   background-repeat: no-repeat;
-  width: 208px;
-  height: 46px;
+  background-size: cover;
+  width: calc(210px / 2);
+  height: 23px;
 }
 
 .site-map .nav > li:nth-child(4) > a {
   background-image: url(../images/sitemap-title-4.png);
   background-position: center;
   background-repeat: no-repeat;
-  width: 126px;
-  height: 45px;
+  background-size: cover;
+  width: calc(130px / 2);
+  height: 23px;
 }
 
 .site-map .nav > li:nth-child(5) > a {
   background-image: url(../images/sitemap-title-5.png);
   background-position: center;
   background-repeat: no-repeat;
-  width: 243px;
-  height: 45px;
+  background-size: cover;
+  width: calc(248px / 2);
+  height: 23px;
 }
 
 .site-map .nav > li > a ~ ul {
-  padding: 0;
+  padding: 30px 0;
   list-style: none;
+}
+
+.site-map .nav > li > a ~ ul > li {
+  padding: 10px 0;
+  margin-bottom: 0px;
+}
+
+.site-map .nav > li > a ~ ul > li > a {
+  display: flex;
+  align-items: center;
+}
+
+.site-map .nav > li > a ~ ul > li > a > .icon {
+  display: inline-block;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc(107px / 2);
+  height: calc(107px / 2);
+}
+
+.site-map .nav > li > a ~ ul > li > a > span:nth-child(2) {
+  padding-left: 0px;
+}
+
+.site-map .nav > li:nth-child(1) .depth .depth-child-1 a .icon {
+  background-image: url(../images/sitemap-icon-5.png);
+}
+
+.site-map .nav > li:nth-child(1) .depth .depth-child-2 a .icon {
+  background-image: url(../images/sitemap-icon-6.png);
+}
+
+.site-map .nav > li:nth-child(2) .depth .depth-child-1 a .icon {
+  background-image: url(../images/sitemap-icon-7.png);
+}
+
+.site-map .nav > li:nth-child(3) .depth .depth-child-1 a .icon {
+  background-image: url(../images/sitemap-icon-8.png);
+}
+
+.site-map .nav > li:nth-child(3) .depth .depth-child-2 a .icon {
+  background-image: url(../images/sitemap-icon-9.png);
+}
+
+.site-map .nav > li:nth-child(3) .depth .depth-child-3 a .icon {
+  background-image: url(../images/sitemap-icon-10.png);
+}
+
+.site-map .nav > li:nth-child(3) .depth .depth-child-4 a .icon {
+  background-image: url(../images/sitemap-icon-11.png);
+}
+
+.site-map .nav > li:nth-child(4) .depth .depth-child-1 a .icon {
+  background-image: url(../images/sitemap-icon-12.png);
+}
+
+.site-map .nav > li:nth-child(4) .depth .depth-child-2 a .icon {
+  background-image: url(../images/sitemap-icon-2.png);
+}
+
+.site-map .nav > li:nth-child(4) .depth .depth-child-3 a .icon {
+  background-image: url(../images/sitemap-icon-3.png);
+}
+
+.site-map .nav > li:nth-child(4) .depth .depth-child-4 a .icon {
+  background-image: url(../images/sitemap-icon-4.png);
+}
+
+.site-map .nav > li:nth-child(5) .depth .depth-child-1 a .icon {
+  background-image: url(../images/sitemap-icon-1.png);
+}
+
+.site-map .nav > li:nth-child(5) .depth .depth-child-2 a .icon {
+  background-image: url(../images/sitemap-icon-13.png);
+}
+
+.site-map .nav > li:nth-child(5) .depth .depth-child-3 a .icon {
+  background-image: url(../images/sitemap-icon-14.png);
 }
 
 /* side-right */
@@ -1235,7 +1348,7 @@ input[type="range"]::-ms-fill-upper {
 .scroll-btn {
   display: block;
   position: fixed;
-  bottom: 60px;
+  bottom: 40px;
   right: 87px;
 }
 
@@ -1248,11 +1361,11 @@ input[type="range"]::-ms-fill-upper {
   height: 45px;
 }
 
-@media screen and (max-width: 1760px) {
+/* @media screen and (max-width: 1760px) {
   .scroll-btn {
     display: none;
   }
-}
+} */
 
 /* 메인제외 - 검색메뉴 */
 .page-other .search-menu {
