@@ -42,7 +42,7 @@ $(function () {
   // seach-menu event
   $(window).on("scroll", function () {
     if ($(this).scrollTop() >= 270) {
-      $(".search-menu")
+      $(".search-menu-main")
         .css({
           position: "fixed",
           height: "100%",
@@ -50,7 +50,7 @@ $(function () {
         })
         .scrollTop(270);
     } else {
-      $(".search-menu").css({
+      $(".search-menu-main").css({
         position: "absolute",
         height: "",
         overflow: "",
@@ -58,13 +58,30 @@ $(function () {
     }
   });
 
+  if ($(".search-menu-main").css("left") === "-550px") {
+    $(".search-menu").removeClass("search-menu-main");
+  } else {
+    $(".search-menu").addClass("search-menu-main");
+  }
+
+  $(window).resize(function () {
+    if ($(window).innerWidth() <= 1250) {
+      $(".search-menu").removeClass("search-menu-main");
+    } else {
+      $(".search-menu").addClass("search-menu-main");
+      if ($(".search-menu").hasClass("on")) {
+        $(".search-menu").removeClass("on");
+      }
+    }
+  });
+
   $(".search-pop").on("click", function () {
     if ($(".search-menu").hasClass("on")) {
       $(".search-menu").removeClass("on");
-      $(".page-other").css({ height: "", overflow: "" });
+      $(".page-other, .page-main").css({ height: "", overflow: "" });
     } else {
       $(".search-menu").addClass("on");
-      $(".page-other").css({ height: "100%", overflow: "hidden" });
+      $(".page-other, .page-main").css({ height: "100%", overflow: "hidden" });
     }
   });
 

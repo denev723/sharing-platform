@@ -1,7 +1,6 @@
 /* 공통 */
 body {
   font-family: "Nanum Gothic";
-  min-width: 1920px;
 }
 
 /* .gothic {
@@ -56,12 +55,13 @@ a:hover {
 }
 
 /* 공통 - 검색메뉴 */
-.search-menu {
+.search-menu-main {
   position: absolute;
   top: 0;
   left: 90px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  transition: left 0.5s ease-in-out;
 }
 
 .search-menu::-webkit-scrollbar {
@@ -444,7 +444,7 @@ input[type="range"]::-ms-fill-upper {
   border-right: 1px solid #d9dade;
 }
 
-.side-left .sitemap-open {
+.sitemap-open {
   background-image: url(../images/menu-bar.png);
   width: 35px;
   height: 35px;
@@ -583,17 +583,23 @@ input[type="range"]::-ms-fill-upper {
   flex: 1;
   background-color: #fff;
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.site-map .wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .site-map .nav {
-  width: 370px;
+  width: 400px;
   margin: auto;
   margin-top: 56px;
   padding: 30px 40px;
 }
 
 .site-map .bg {
-  width: calc(100% - 370px);
+  width: calc(100% - 400px);
   background-color: #333;
   opacity: 0.3;
 }
@@ -737,7 +743,7 @@ input[type="range"]::-ms-fill-upper {
   position: fixed;
   top: 0%;
   right: 0%;
-  width: 71px;
+  width: 72px;
   height: 100vh;
   z-index: 9;
   border-left: 1px solid #d9dade;
@@ -829,13 +835,16 @@ input[type="range"]::-ms-fill-upper {
 .site-header {
   padding: 0px 70px 0px 90px;
   width: 100%;
-  min-width: 1920px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 58px;
   left: 0;
+}
+
+.site-header-mb {
+  display: none;
 }
 
 .site-header .site-logo {
@@ -1006,7 +1015,7 @@ input[type="range"]::-ms-fill-upper {
   margin-top: 39px;
   float: right;
   width: -webkit-calc(100% - 316px); /* for Chrome, Safari */
-  width: calc(100%-316px);
+  width: calc(100% - 316px);
 }
 
 .notice-content > ul {
@@ -1502,14 +1511,14 @@ input[type="range"]::-ms-fill-upper {
   position: fixed;
   top: 0;
   left: -460px;
-  transition: left 0.2s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 .page-other .search-menu.on {
   width: 100vw;
   height: 100vh;
   left: 90;
-  transition: left 0.2s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 .page-other .search-menu.on ~ .bg {
@@ -1534,12 +1543,12 @@ input[type="range"]::-ms-fill-upper {
 .page-other .search-menu ~ .search-pop {
   display: flex;
   left: 90px;
-  transition: left 0.2s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 .page-other .search-menu.on ~ .search-pop {
   left: 639px;
-  transition: left 0.2s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 /* 메인제외 - 헤더 */
