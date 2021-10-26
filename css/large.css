@@ -1,11 +1,19 @@
- .site-content .wrapper{
-    max-width: 950px;
+.site-content .wrapper {
+  max-width: 950px;
 }
 
 .search-menu {
-    height: 100%;
+  height: 100%;
 }
 
 .search-menu .wrapper {
-    height: 91%;
+  height: 91%;
+}
+
+.page-other .search-menu {
+  height: 100%;
+}
+
+.page-other .search-menu .wrapper {
+  height: 100%;
 }

@@ -417,12 +417,12 @@ input[type="range"]::-ms-fill-upper {
 
 .search-pop .pop-icon {
   display: block;
-  background-image: url(../images/right-arrow.png);
+  background-image: url(../images/pop-right-arrow.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
+  width: 13px;
+  height: 20px;
 }
 
 /* 공통 - 사이드바 */
@@ -583,6 +583,12 @@ input[type="range"]::-ms-fill-upper {
   flex: 1;
   background-color: #fff;
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.site-map .wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .site-map .nav {
@@ -1512,7 +1518,7 @@ input[type="range"]::-ms-fill-upper {
   transition: left 0.2s ease-in-out;
 }
 
-.page-other .search-menu.on ~ .bg {
+.page-other .search-menu.on .wrapper ~ .bg {
   width: -webkit-calc(100% - 550px); /* for Chrome, Safari */
   width: calc(100% - 550px);
 }
@@ -1540,6 +1546,10 @@ input[type="range"]::-ms-fill-upper {
 .page-other .search-menu.on ~ .search-pop {
   left: 639px;
   transition: left 0.2s ease-in-out;
+}
+
+.page-other .search-menu.on ~ .search-pop .pop-icon {
+  background-image: url(../images/pop-left-arrow.png);
 }
 
 /* 메인제외 - 헤더 */
@@ -2880,4 +2890,14 @@ input[type="range"]::-ms-fill-upper {
   position: absolute;
   top: 4px;
   left: 0;
+}
+
+/* preparing-page */
+.page-preparing .site-content .wrapper .preparing {
+  background-image: url(../images/temps/page-not-found.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: calc(731 / 1250 * 100%);
+  margin-bottom: 300px;
 }

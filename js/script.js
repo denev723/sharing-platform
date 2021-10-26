@@ -23,18 +23,20 @@ $(function () {
   // site-map
   $(".sitemap-open").on("click", function () {
     $(".site-map").addClass("on");
+    $("body").css({ height: "100%", overflow: "hidden" });
+    $(".search-menu").css({ height: "100%", overflow: "hidden" });
   });
 
   $(".sitemap-close").on("click", function () {
     $(".site-map").removeClass("on");
-    $("body > #wrap").css({ height: "", overflow: "" });
+    $("body").css({ height: "", overflow: "" });
     $(".search-menu").css({ height: "", overflow: "" });
   });
 
   $(".site-map > .wrapper").on("scroll", function () {
     var top = $(this).scrollTop();
     if (top === 368) {
-      $("body").css({ height: "100vh", overflow: "hidden" });
+      $("body").css({ height: "100%", overflow: "hidden" });
       $(".search-menu").css({ height: "100%", overflow: "hidden" });
     }
   });
@@ -126,11 +128,11 @@ $(function () {
     $(".lnb").addClass("over");
   });
 
-  $(".lnb .nav").on({
+  $(".lnb .nav, .lnb .depth").on({
     mouseleave: function () {
       setTimeout(function () {
         $(".lnb").removeClass("over");
-      }, 1000);
+      }, 2000);
     },
   });
 });
