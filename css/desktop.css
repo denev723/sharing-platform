@@ -829,7 +829,7 @@ input[type="range"]::-ms-fill-upper {
 .site-header {
   padding: 0px 70px 0px 90px;
   width: 100%;
-  min-width: 1160px;
+  min-width: 1920px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1544,8 +1544,7 @@ input[type="range"]::-ms-fill-upper {
 
 /* 메인제외 - 헤더 */
 .page-other .site-header {
-  min-width: 970px;
-  width: 1920px;
+  min-width: 1920px;
 }
 
 .page-other .lnb {

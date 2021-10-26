@@ -34,7 +34,7 @@ $(function () {
   $(".site-map > .wrapper").on("scroll", function () {
     var top = $(this).scrollTop();
     if (top === 368) {
-      $("body > #wrap").css({ height: "100vh", overflow: "hidden" });
+      $("body").css({ height: "100vh", overflow: "hidden" });
       $(".search-menu").css({ height: "100%", overflow: "hidden" });
     }
   });
