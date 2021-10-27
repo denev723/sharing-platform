@@ -1,7 +1,6 @@
 /* 공통 */
 body {
   font-family: "Nanum Gothic";
-  min-width: 1920px;
 }
 
 /* .gothic {
@@ -241,15 +240,16 @@ a:hover {
 
 input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
+  width: 100%;
+  cursor: pointer;
+  border-radius: 1.3px;
   background: linear-gradient(
     to right,
     white 0%,
     white 50%,
     rgb(130, 164, 255) 50%,
     rgb(130, 164, 255) 100%
-  ); /* Otherwise white in Chrome */
-  z-index: 9;
+  );
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -376,6 +376,27 @@ input[type="range"]::-ms-fill-upper {
   z-index: 0;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .search-period .range-marks {
+    margin-top: -38px;
+    z-index: 9;
+  }
+  .search-period .period-marks .short {
+    top: 3px;
+  }
+
+  .search-period .period-marks .middle {
+    top: 3px;
+  }
+
+  .search-period .period-marks .long {
+    top: 3px;
+  }
+  input[type="range"] {
+    background: none;
+  }
+}
+
 .search-period .range-marks span {
   width: 8px;
   height: 8px;
@@ -423,6 +444,10 @@ input[type="range"]::-ms-fill-upper {
   background-repeat: no-repeat;
   width: 13px;
   height: 20px;
+}
+
+.search-menu.on ~ .search-pop .pop-icon {
+  background-image: url(../images/pop-left-arrow.png);
 }
 
 /* 공통 - 사이드바 */
@@ -833,15 +858,18 @@ input[type="range"]::-ms-fill-upper {
 
 /* 메인 - 헤더 */
 .site-header {
-  padding: 0px 70px 0px 90px;
+  padding: 58px 70px 0px 90px;
   width: 100%;
-  min-width: 1920px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   position: absolute;
-  top: 58px;
+  top: 0;
   left: 0;
+}
+
+.site-header-mb {
+  display: none;
 }
 
 .site-header .site-logo {
@@ -853,8 +881,6 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-header .lnb {
-  flex: 1;
-  margin-top: 2px;
   margin-left: 230px;
 }
 
@@ -899,21 +925,23 @@ input[type="range"]::-ms-fill-upper {
 .lnb .nav .depth {
   font-weight: normal;
   list-style: none;
-  padding: 0;
-  position: absolute;
-  top: 48px;
-  left: 13px;
-  display: none;
-  width: max-content;
   font-size: 13px;
+  padding: 10px 0px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .lnb.over .nav .depth {
   display: flex;
 }
 
+.lnb .nav .depth > li {
+  padding: 5px 0px;
+}
+
 .lnb .nav .depth > li > a {
-  padding: 11px 10px;
+  padding: 5px;
 }
 
 .lnb .nav .depth > li > a:hover {
@@ -928,7 +956,7 @@ input[type="range"]::-ms-fill-upper {
 
 .gnb {
   position: relative;
-  margin-top: 1px;
+  margin-top: 10px;
   margin-right: 32px;
 }
 
@@ -1050,33 +1078,6 @@ input[type="range"]::-ms-fill-upper {
   position: relative;
 }
 
-.content-category::before {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 141px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-bottom-left-radius: 60px;
-  background-color: #eee;
-  opacity: 0.8;
-}
-
-.content-category::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 141px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-top-right-radius: 60px;
-  border-bottom-right-radius: 60px;
-  background-color: #eee;
-  opacity: 0.8;
-}
-
 .content-category::-webkit-scrollbar {
   display: none;
 }
@@ -1084,6 +1085,7 @@ input[type="range"]::-ms-fill-upper {
 .content-category .item-wrapper {
   height: 100%;
   padding: 10px 0px;
+  position: relative;
 }
 
 .content-category .item-wrapper .item {
@@ -1507,14 +1509,19 @@ input[type="range"]::-ms-fill-upper {
 .page-other .search-menu {
   position: fixed;
   top: 0;
-  left: -460px;
+  left: -550px;
   transition: left 0.2s ease-in-out;
+  z-index: 6;
+}
+
+.page-other .search-pop {
+  z-index: 7;
 }
 
 .page-other .search-menu.on {
   width: 100vw;
   height: 100vh;
-  left: 90;
+  left: 90px;
   transition: left 0.2s ease-in-out;
 }
 
@@ -1553,10 +1560,6 @@ input[type="range"]::-ms-fill-upper {
 }
 
 /* 메인제외 - 헤더 */
-.page-other .site-header {
-  min-width: 1920px;
-}
-
 .page-other .lnb {
   margin-left: -41px;
 }
@@ -1590,7 +1593,8 @@ input[type="range"]::-ms-fill-upper {
   align-items: center;
   font-size: 16px;
   color: #fff;
-  letter-spacing: -1;
+  padding: 0;
+  letter-spacing: -1px;
 }
 
 .page-notice .site-content .wrapper-snb .depth li,
@@ -1711,15 +1715,12 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-content .lecture-filter .order-group .btn-default {
-  color: #333;
+  color: #bbb;
   font-size: 14px;
   letter-spacing: -1px;
-}
-
-.site-content .lecture-filter .order-group .btn-default:not(:last-child) {
-  padding: 13px 6px 15px 0px;
-  color: #bbb;
-  margin-top: -2px;
+  border: none;
+  background-color: transparent;
+  padding-right: 10px;
 }
 
 .site-content
@@ -1808,7 +1809,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-content .filter-list .btn-wrapper .btn-reset {
-  padding: 15px 23px 15px 22px;
+  padding: 14px 23px 14px 22px;
   border-radius: 27px;
   color: #3e72ff;
   border: 2px solid #3e72ff;
@@ -2080,8 +2081,7 @@ input[type="range"]::-ms-fill-upper {
   border-radius: 0px;
   background-color: #bbb;
   letter-spacing: -1px;
-  position: relative;
-  padding-left: 34px;
+  padding: 16px;
 }
 
 .lecture-detail .video-wrapper .info-container .btn-block:hover {
@@ -2095,7 +2095,13 @@ input[type="range"]::-ms-fill-upper {
   outline-offset: 0px;
 }
 
-.lecture-detail .video-wrapper .info-container .btn-block .star-logo {
+.lecture-detail .video-wrapper .info-container .btn-block span {
+  position: relative;
+  margin: 0;
+  padding-left: 23px;
+}
+
+.lecture-detail .video-wrapper .info-container .btn-block span .star-logo {
   display: inline-block;
   background-image: url(../images/star-logo.png);
   background-repeat: no-repeat;
@@ -2104,8 +2110,8 @@ input[type="range"]::-ms-fill-upper {
   position: absolute;
   width: 25px;
   height: 25px;
-  top: 13px;
-  left: 134px;
+  top: -2px;
+  left: -8px;
 }
 
 .lecture-detail .intro-wrapper {
@@ -2167,6 +2173,9 @@ input[type="range"]::-ms-fill-upper {
 .lecture-detail .lecture-list .item-list .item .left {
   display: flex;
   align-items: center;
+}
+
+.lecture-detail .lecture-list .item-list .item.complete .left .finish-logo {
 }
 
 .lecture-detail .lecture-list .item-list .item .left .lec-thumbnail {

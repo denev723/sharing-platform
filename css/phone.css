@@ -1,0 +1,355 @@
+/* 공통 */
+.side-left {
+  left: -90px;
+  transition: left 0.5s ease-in-out;
+}
+
+.side-right {
+  right: -72px;
+  transition: right 0.5s ease-in-out;
+}
+
+.right-menu {
+  right: -47px;
+  transition: right 0.5s ease-in-out;
+}
+
+.scroll-btn {
+  display: none;
+}
+
+.site-header {
+  display: none;
+}
+
+.site-header-mb {
+  display: flex;
+  align-items: center;
+  position: static;
+  padding: 20px 30px;
+  border-bottom: 2px solid #eee;
+}
+
+.site-header-mb .sitemap-open {
+  background-image: url(../images/menu-bar-m.png);
+  width: 20px;
+  height: 20px;
+}
+
+.site-header-mb .site-logo {
+  padding: 0;
+}
+
+.site-header-mb .site-logo .main {
+  background-size: cover;
+  background-position: center;
+  width: 195px;
+  height: 40px;
+}
+
+.site-header-mb .gnb {
+  margin: 0;
+}
+
+.site-header-mb .gnb a {
+  background-image: url(../images/login-btn-m.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+}
+
+.search-pop {
+  top: 229px;
+  width: 50px;
+  height: 191px;
+}
+
+.search-pop .search-icon {
+  width: 23px;
+  height: 23px;
+}
+
+/* main-page */
+.page-main .site-content {
+  margin-left: 0px;
+  margin-right: 0px;
+  transition: margin-left 0.5s ease-in-out;
+  padding-top: 30px;
+}
+
+.page-main .site-content .wrapper {
+  padding: 0px 30px;
+}
+
+.page-main .site-content .wrapper .notice .notice-title {
+  float: none;
+  width: 100%;
+  padding: 4px;
+}
+
+.page-main .site-content .wrapper .notice .notice-title a {
+  background-image: url(../images/notice-title-m.png);
+  padding-top: calc(224 / 1100 * 100%);
+}
+
+.page-main .site-content .wrapper .notice .notice-content {
+  float: none;
+  width: 100%;
+}
+
+.page-main .lecture-outro .item-wrapper .item {
+  padding: 40px 0px;
+}
+
+.page-main .lecture-outro .item-wrapper .item:nth-child(2) {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.page-main .lecture-outro .item-wrapper .item:nth-child(2) > div:first-child {
+  border: none;
+}
+
+.page-main .search-menu {
+  position: fixed;
+  top: 0;
+  left: -550px;
+  transition: left 0.5s ease-in-out;
+}
+
+.page-main .search-menu .wrapper {
+  width: 550px;
+}
+
+.page-main .search-menu .site-footer {
+  display: none;
+}
+
+.page-main .search-menu.on {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.page-main .search-menu.on .wrapper {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.page-main .search-menu.on .wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.page-main .search-menu.on ~ .search-pop {
+  left: 550px;
+}
+
+.page-main .search-pop {
+  display: flex;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.page-main .site-footer-mb {
+  display: block;
+}
+
+.page-main .site-footer-mb address,
+.page-other .site-footer address {
+  font-size: 12px;
+}
+
+.page-main .site-footer-mb .btn-link,
+.page-other .site-footer .btn-link {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 390px) {
+  .page-main .site-footer-mb .footer-logo,
+  .page-other .site-footer .footer-logo {
+    float: left;
+  }
+}
+
+.page-main .lecture-outro .outro-img > a {
+  background-image: url(../images/outro-4-m.png);
+  padding-top: calc(300 / 1355 * 100%);
+  display: block;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-main .content-category {
+  padding: 5px 48px 13px 30px;
+}
+
+.page-main .notice-content {
+  margin-top: 12px;
+}
+
+.page-main .content-category {
+  margin-top: 25px;
+}
+
+.page-main .lecture {
+  margin-top: 45px;
+}
+
+.page-main .lecture .item-list {
+  margin-top: 15px;
+}
+
+.page-main .lecture-new,
+.page-main .lecture-recommend,
+.page-main .lecture-outro {
+  margin-top: 25px;
+}
+
+.page-main .lecture-outro {
+  padding-bottom: 43px;
+}
+
+.page-main .lecture-new .item-list,
+.page-main .lecture-recommend .item-list,
+.page-main .lecture-outro .item-wrapper {
+  margin-top: 35px;
+}
+
+.page-main .lecture-outro .outro-img {
+  margin-top: 12px;
+}
+
+/* sub page */
+.page-other .search-menu ~ .search-pop {
+  left: 0;
+}
+
+.page-other .search-menu.on {
+  left: 0;
+}
+
+.page-other .search-menu.on .wrapper {
+  width: 550px;
+}
+
+.page-other .search-menu.on .wrapper ~ .bg {
+  width: calc(100% - 550px);
+}
+
+.page-other .search-menu.on ~ .search-pop {
+  left: 550px;
+}
+
+.page-other .site-content {
+  padding: 0;
+  margin: 0;
+}
+
+.page-other .site-content .wrapper {
+  padding: 30px;
+}
+
+/* lecture-list */
+.site-content .lecture-filter .subtitle-wrapper .page-title {
+  font-size: 30px;
+}
+
+.site-content .lecture-filter .subtitle-wrapper .page-title::after {
+  background-size: cover;
+  width: 160px;
+  height: 42px;
+  right: -110px;
+}
+
+.site-content .lecture-filter .order-group {
+  margin-top: 0;
+}
+
+.site-content
+  .lecture-filter
+  .order-group
+  .filter-item
+  .dropdown-toggle
+  .caret {
+  margin-left: 34px;
+}
+
+.site-content .lecture-filter .order-group .filter-item .dropdown-toggle {
+  padding: 14px 10px;
+}
+
+.site-content .filter-list .list-item > li {
+  font-size: 13px;
+}
+
+.site-content .lecture .more-btn {
+  margin-bottom: 66px;
+  padding: 15px 5px 15px 21px;
+}
+
+.site-content .filter-list .btn-wrapper .btn-reset {
+  font-size: 13px;
+}
+
+/* lecture */
+.lecture-detail .lecture-status {
+  font-size: 12px;
+}
+
+.lecture-detail .title-wrapper .info-container .title {
+  font-size: 30px;
+}
+
+.lecture-detail .title-wrapper .sns-group a {
+  float: left;
+}
+
+.lecture-detail .title-wrapper .info-container {
+  margin-bottom: 17px;
+}
+
+.page-lecture .lecture-detail .video-wrapper {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.page-lecture .lecture-detail .video-wrapper .video-container {
+  float: none;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: calc(480 / 860 * 100%);
+  margin-bottom: 30px;
+}
+
+.lecture-detail .video-wrapper .info-container {
+  float: none;
+}
+
+.page-lecture-not-auth
+  .lecture-detail
+  .video-wrapper
+  .video-container
+  .application-btn {
+  background-size: cover;
+  width: 139px;
+  height: 56px;
+}
+
+@media screen and (max-width: 627px) {
+  .page-lecture-not-auth
+    .lecture-detail
+    .video-wrapper
+    .video-container
+    .application-btn {
+    background-size: cover;
+    width: 100px;
+    height: 40px;
+  }
+}
