@@ -69,6 +69,13 @@
   width: 23px;
   height: 23px;
 }
+.search-menu .search-sub {
+  width: 306px;
+}
+
+.search-content .search-category .category-title {
+  font-size: 12px;
+}
 
 /* main-page */
 .page-main .site-content {
@@ -305,8 +312,15 @@
   font-size: 30px;
 }
 
-.lecture-detail .title-wrapper .sns-group a {
+.lecture-detail .title-wrapper .sns-group {
   float: left;
+  margin-top: 15px;
+}
+
+.lecture-detail .title-wrapper .sns-group a {
+  float: right;
+  width: 40px;
+  height: 40px;
 }
 
 .lecture-detail .title-wrapper .info-container {
@@ -352,4 +366,40 @@
     width: 100px;
     height: 40px;
   }
+}
+
+.lecture-detail .lecture-list .item-list .item > div {
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px 0px 0px 15px;
+  height: 120px;
+}
+
+.lecture-detail .lecture-list .item-list .item .info .play-btn {
+  width: 25px;
+  height: 25px;
+}
+
+/* participating-univ */
+.page-part-univ .site-content .content .item-list .item:nth-child(1),
+.page-part-univ .site-content .content .item-list .item:nth-child(2),
+.page-part-univ .site-content .content .item-list .item:nth-child(4),
+.page-part-univ .site-content .content .item-list .item:nth-child(5) {
+  border-right: 1px solid #d5d8df;
+}
+
+.page-part-univ .site-content .content .item-list .item:not(:first-child) {
+  border-top: none;
+}
+
+.page-part-univ .site-content .content .item-list .item:first-child {
+  border-top-right-radius: 5px;
+}
+
+.page-part-univ .site-content .content .item-list .item:nth-child(3) {
+  border-radius: 0;
+}
+
+.page-part-univ .site-content .content .item-list .item:nth-child(6) {
+  border-bottom-left-radius: 5px;
 }

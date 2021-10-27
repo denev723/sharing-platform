@@ -624,7 +624,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .site-map .bg {
-  width: calc(100% - 370px);
+  width: calc(100% - 400px);
   background-color: #333;
   opacity: 0.3;
 }
@@ -2163,52 +2163,58 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .lecture-detail .lecture-list .item-list .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0px;
+  padding: 12px 25px 12px 0px;
   border-bottom: 1px solid #e6e6e6;
 }
 
-.lecture-detail .lecture-list .item-list .item .left {
-  display: flex;
-  align-items: center;
-}
-
-.lecture-detail .lecture-list .item-list .item.complete .left .finish-logo {
-}
-
-.lecture-detail .lecture-list .item-list .item .left .lec-thumbnail {
+.lecture-detail .lecture-list .item-list .item .lec-thumbnail {
   position: relative;
-  display: inline-block;
+  display: block;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 170px;
   height: 120px;
+  float: left;
 }
 
-.lecture-detail .lecture-list .item-list a:nth-child(1) .left .lec-thumbnail {
+.lecture-detail
+  .lecture-list
+  .item-list
+  .item-finish
+  .lec-thumbnail
+  .finish-logo {
+  background-image: url(../images/finish-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 34px;
+  height: 35px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+
+.lecture-detail .lecture-list .item-list a:nth-child(1) .lec-thumbnail {
   background-image: url(../images/temps/lec-list-thumb-1.png);
 }
 
-.lecture-detail .lecture-list .item-list a:nth-child(2) .left .lec-thumbnail {
+.lecture-detail .lecture-list .item-list a:nth-child(2) .lec-thumbnail {
   background-image: url(../images/temps/lec-list-thumb-2.png);
 }
 
-.lecture-detail .lecture-list .item-list a:nth-child(3) .left .lec-thumbnail {
+.lecture-detail .lecture-list .item-list a:nth-child(3) .lec-thumbnail {
   background-image: url(../images/temps/lec-list-thumb-3.png);
 }
 
-.lecture-detail .lecture-list .item-list a:nth-child(4) .left .lec-thumbnail {
+.lecture-detail .lecture-list .item-list a:nth-child(4) .lec-thumbnail {
   background-image: url(../images/temps/lec-list-thumb-4.png);
 }
 
-.lecture-detail .lecture-list .item-list a:nth-child(5) .left .lec-thumbnail {
+.lecture-detail .lecture-list .item-list a:nth-child(5) .lec-thumbnail {
   background-image: url(../images/temps/lec-list-thumb-5.png);
 }
 
-.lecture-detail .lecture-list .item-list a:nth-child(6) .left .lec-thumbnail {
+.lecture-detail .lecture-list .item-list a:nth-child(6) .lec-thumbnail {
   background-image: url(../images/temps/lec-list-thumb-6.png);
 }
 
@@ -2219,27 +2225,34 @@ input[type="range"]::-ms-fill-upper {
   margin-left: 18px;
 }
 
-.lecture-detail .lecture-list .item-list .item .left .item-title .lec-title {
+.lecture-detail .lecture-list .item-list .item .title .lec-title {
   color: #999;
 }
 
-.lecture-detail .lecture-list .item-list .item .right {
+.lecture-detail .lecture-list .item-list .item > div {
+  padding: 35px 0px 35px 15px;
+  flex: 1;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding-right: 25px;
 }
 
-.lecture-detail .lecture-list .item-list .item .right .play-time {
+.lecture-detail .lecture-list .item-list .item .play-time {
   font-size: 15px;
   letter-spacing: -1px;
 }
 
-.lecture-detail .lecture-list .item-list .item .right .play-time span {
+.lecture-detail .lecture-list .item-list .item .info {
+  display: flex;
+  align-items: center;
+}
+
+.lecture-detail .lecture-list .item-list .item .play-time span {
   margin-right: 8px;
   color: #3e72ff;
 }
 
-.lecture-detail .lecture-list .item-list .item .right .play-btn {
+.lecture-detail .lecture-list .item-list .item .info .play-btn {
   display: inline-block;
   background-image: url(../images/play-round.png);
   background-repeat: no-repeat;
@@ -2254,7 +2267,7 @@ input[type="range"]::-ms-fill-upper {
   background-color: #f9f9f9;
 }
 
-.lecture-detail .lecture-list .item-list a:hover .item .right .play-btn {
+.lecture-detail .lecture-list .item-list a:hover .item .info .play-btn {
   background-image: url(../images/play-round-hover.png);
 }
 
