@@ -70,11 +70,16 @@
   height: 23px;
 }
 .search-menu .search-sub {
-  width: 306px;
+  width: 266px;
+  margin-left: 56px;
 }
 
 .search-content .search-category .category-title {
   font-size: 12px;
+}
+
+.search-period .period-marks .middle {
+  left: 127px;
 }
 
 /* main-page */
@@ -92,7 +97,6 @@
 .page-main .site-content .wrapper .notice .notice-title {
   float: none;
   width: 100%;
-  padding: 4px;
 }
 
 .page-main .site-content .wrapper .notice .notice-title a {
@@ -121,12 +125,12 @@
 .page-main .search-menu {
   position: fixed;
   top: 0;
-  left: -550px;
+  left: -450px;
   transition: left 0.5s ease-in-out;
 }
 
 .page-main .search-menu .wrapper {
-  width: 550px;
+  width: 450px;
 }
 
 .page-main .search-menu .site-footer {
@@ -140,6 +144,10 @@
   height: 100vh;
 }
 
+.search-menu.on .bg {
+  width: calc(100% - 450px);
+}
+
 .page-main .search-menu.on .wrapper {
   overflow: scroll;
   -ms-overflow-style: none;
@@ -151,7 +159,7 @@
 }
 
 .page-main .search-menu.on ~ .search-pop {
-  left: 550px;
+  left: 450px;
 }
 
 .page-main .search-pop {
@@ -192,23 +200,33 @@
 }
 
 .page-main .content-category {
-  padding: 5px 48px 13px 30px;
+  padding: 0px 48px 0px 30px;
+  margin-top: 25px;
+  height: 111px;
 }
 
 .page-main .notice-content {
   margin-top: 12px;
 }
 
-.page-main .content-category {
-  margin-top: 25px;
-}
-
 .page-main .lecture {
   margin-top: 45px;
 }
 
+.page-main .lecture > .title {
+  font-size: 24px;
+}
+
 .page-main .lecture .item-list {
   margin-top: 15px;
+}
+
+.page-main .lecture-rt .title {
+  font-size: 24px;
+}
+
+.page-main .lecture-rt .sub-title {
+  font-size: 16px;
 }
 
 .page-main .lecture-new,
@@ -241,15 +259,15 @@
 }
 
 .page-other .search-menu.on .wrapper {
-  width: 550px;
+  width: 450px;
 }
 
 .page-other .search-menu.on .wrapper ~ .bg {
-  width: calc(100% - 550px);
+  width: calc(100% - 450px);
 }
 
 .page-other .search-menu.on ~ .search-pop {
-  left: 550px;
+  left: 450px;
 }
 
 .page-other .site-content {
@@ -264,13 +282,15 @@
 /* lecture-list */
 .site-content .lecture-filter .subtitle-wrapper .page-title {
   font-size: 30px;
+  margin-left: 25px;
 }
 
 .site-content .lecture-filter .subtitle-wrapper .page-title::after {
   background-size: cover;
   width: 160px;
   height: 42px;
-  right: -110px;
+  right: -113px;
+  top: 6px;
 }
 
 .site-content .lecture-filter .order-group {
@@ -303,9 +323,16 @@
   font-size: 13px;
 }
 
+.lecture .thumbnail .caption .title {
+  font-size: 18px;
+}
+
 /* lecture */
 .lecture-detail .lecture-status {
   font-size: 12px;
+}
+.lecture-detail .lecture-status span {
+  padding: 7px 12px 7px;
 }
 
 .lecture-detail .title-wrapper .info-container .title {
@@ -314,7 +341,7 @@
 
 .lecture-detail .title-wrapper .sns-group {
   float: left;
-  margin-top: 15px;
+  margin-top: 0;
 }
 
 .lecture-detail .title-wrapper .sns-group a {
@@ -368,11 +395,39 @@
   }
 }
 
+.lecture-detail .video-wrapper .info-container table {
+  font-size: 12px;
+}
+
+.lecture-detail .intro-wrapper .description span {
+  font-size: 13px;
+}
+
+.lecture-detail .intro-wrapper .title .title-img {
+  background-size: cover;
+  width: 82px;
+  height: 23px;
+}
+
+.lecture-detail .lecture-list .title .title-img {
+  background-size: cover;
+  width: 142px;
+  height: 23px;
+}
+
 .lecture-detail .lecture-list .item-list .item > div {
   align-items: flex-start;
   flex-direction: column;
   padding: 0px 0px 0px 15px;
   height: 120px;
+}
+
+.lecture-detail .lecture-list .item-list .item > div .title {
+  font-size: 12px;
+}
+
+.lecture-detail .lecture-list .item-list .item .play-time {
+  font-size: 12px;
 }
 
 .lecture-detail .lecture-list .item-list .item .info .play-btn {
@@ -381,6 +436,29 @@
 }
 
 /* participating-univ */
+.page-part-univ .site-content .page-title-wrapper .page-title {
+  width: 105px;
+  padding-top: calc(61 / 155 * 105px);
+}
+
+.page-part-univ .site-content .content .content-sub {
+  padding: 23px 0px;
+  margin: 0;
+}
+
+.page-part-univ .site-content .content .content-sub p {
+  font-size: 12px;
+  margin: 10px 10px 10px 0px;
+}
+
+.page-part-univ .site-content .content .item-list {
+  margin-top: 21px;
+}
+
+.page-part-univ .site-content .content .item-list .item {
+  height: 310px;
+}
+
 .page-part-univ .site-content .content .item-list .item:nth-child(1),
 .page-part-univ .site-content .content .item-list .item:nth-child(2),
 .page-part-univ .site-content .content .item-list .item:nth-child(4),
@@ -402,4 +480,467 @@
 
 .page-part-univ .site-content .content .item-list .item:nth-child(6) {
   border-bottom-left-radius: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .page-part-univ .site-content .content .item-list .item:nth-child(1) {
+    border-top-right-radius: 0px;
+  }
+
+  .page-part-univ .site-content .content .item-list .item:nth-child(2) {
+    border-top: 1px solid #d5d8df;
+    border-top-right-radius: 5px;
+    border-left: none;
+  }
+
+  .page-part-univ .site-content .content .item-list .item:nth-child(4) {
+    border-bottom-left-radius: 0px;
+    border-left: none;
+  }
+
+  .page-part-univ .site-content .content .item-list .item:nth-child(5) {
+    border-bottom-left-radius: 5px;
+  }
+
+  .page-part-univ .site-content .content .item-list .item:nth-child(6) {
+    border-bottom-left-radius: 0px;
+    border-left: none;
+  }
+}
+
+.page-part-univ .site-content .content .item-list .item .item-logo {
+  padding: 53px 0px;
+}
+
+/* .page-part-univ .site-content .content .item-list .item {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-part-univ .site-content .content .item-list .item .item-logo {
+  padding: 0;
+  flex: 1;
+}
+
+.page-part-univ .site-content .content .item-list .item .item-info {
+  margin-bottom: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.page-part-univ .site-content .content .item-list .item .item-logo span {
+  background-size: cover;
+} */
+
+/* .page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item:nth-child(1)
+  .item-logo
+  span {
+  width: 163px;
+  height: 40px;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item:nth-child(2)
+  .item-logo
+  span {
+  width: 160px;
+  height: 50px;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item:nth-child(3)
+  .item-logo
+  span {
+  width: 154px;
+  height: 20px;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item:nth-child(4)
+  .item-logo
+  span {
+  width: 155px;
+  height: 35px;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item:nth-child(5)
+  .item-logo
+  span {
+  width: 140px;
+  height: 35px;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item:nth-child(6)
+  .item-logo
+  span {
+  width: 155px;
+  height: 35px;
+} */
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item
+  .item-info
+  li
+  p:first-child {
+  font-size: 12px;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item
+  .item-info
+  li
+  p:nth-child(2) {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item
+  .item-info
+  li
+  .phone::after,
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item
+  .item-info
+  li
+  .fax::after,
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item
+  .item-info
+  li
+  .charge::after {
+  top: 0;
+}
+
+.page-part-univ
+  .site-content
+  .content
+  .item-list
+  .item
+  .item-info
+  li
+  .email::after {
+  top: 2;
+}
+
+/* notice */
+.page-notice .site-content .notice {
+  padding-bottom: 44px;
+}
+
+.page-notice .site-content .page-title-wrapper .page-title {
+  width: 105px;
+  padding-top: calc(61 / 155 * 105px);
+  margin-left: 25px;
+}
+
+.page-notice .site-content .notice > ul {
+  margin-top: 34px;
+}
+
+.page-notice .site-content .notice > ul li a {
+  padding: 24px 20px 24px 0px;
+  font-size: 13px;
+}
+
+.page-notice .site-content .notice > ul li a .first {
+  float: none;
+}
+
+.page-notice .site-content .notice > ul li.important a .first .notice {
+  top: 16px;
+  left: -2px;
+}
+
+.page-notice .site-content .notice > ul li a .first .no {
+  padding: 0;
+}
+
+.page-notice .site-content .notice > ul > li .first .subject {
+  display: block;
+  padding: 10px 0px;
+}
+
+.page-notice .site-content .notice > ul li a .last {
+  float: left;
+}
+
+/* notice-content */
+.page-notice-content .site-content .page-title-wrapper .page-title {
+  width: 105px;
+  padding-top: calc(61 / 155 * 105px);
+  margin-left: 25px;
+}
+
+.page-notice-content .wrapper .content {
+  margin-top: 29px;
+  margin-bottom: 29px;
+}
+
+.page-notice-content .wrapper .content .content-description {
+  padding: 24px 10px 61px;
+}
+
+.page-notice-content .wrapper .content .content-menu ul > li > a {
+  align-items: center;
+}
+
+.page-notice-content .wrapper .content .content-menu ul > li > a .title span {
+  display: block;
+}
+
+.page-notice-content
+  .wrapper
+  .content
+  .content-menu
+  ul
+  > li
+  > a
+  .title
+  span:first-child {
+  float: none;
+}
+
+.page-notice-content
+  .wrapper
+  .content
+  .content-menu
+  ul
+  > li
+  > a
+  .title
+  span:last-child {
+  padding: 0;
+  float: left;
+}
+
+/* lec-qna */
+.page-lec-qna .site-content .page-title-wrapper .page-title {
+  width: 105px;
+  padding-top: calc(61 / 155 * 105px);
+  margin-left: 25px;
+}
+
+.page-lec-qna .site-content .content .content-sub {
+  padding: 26px 0px 19px;
+}
+
+.page-lec-qna .site-content .content .content-sub .sub-image {
+  margin: 30px 16px;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.page-lec-qna .site-content .content .content-sub .sub-description {
+  font-size: 12px;
+  line-height: 22px;
+  margin-right: 16px;
+}
+
+.page-lec-qna .site-content .content form {
+  margin-top: 40px;
+}
+
+.page-lec-qna .site-content .content form .form-group .qna-select {
+  width: 230px;
+  font-size: 13px;
+}
+
+.page-lec-qna .site-content .content {
+  padding-top: 10px;
+  padding-bottom: 46px;
+}
+
+@media screen and (max-width: 400px) {
+  /* 메인 페이지 */
+  .notice-content > ul > li > a {
+    font-size: 12px;
+  }
+
+  .notice-content > ul > li > a {
+    padding: 15px 35px 15px 0px;
+  }
+
+  .page-main .site-footer-mb address,
+  .page-other .site-footer address {
+    font-size: 11px;
+  }
+
+  .site-map .bg {
+    width: calc((100% - 350px));
+  }
+
+  .page-main .search-menu .wrapper {
+    width: 300px;
+  }
+
+  .search-menu.on .bg {
+    width: calc(100% - 300px);
+  }
+
+  .page-main .search-menu.on ~ .search-pop {
+    left: 300px;
+  }
+
+  .search-content {
+    padding: 18px 48px 40px;
+  }
+
+  .search-pop .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-pop .search-icon ~ span {
+    font-size: 14px;
+  }
+
+  .search-pop .pop-icon {
+    width: 8px;
+    height: 13px;
+  }
+
+  .site-logo .main {
+    background-size: cover;
+    width: 190px;
+    padding-top: calc(54 / 253 * 190px);
+    height: 0;
+  }
+
+  .search-menu .search-sub {
+    width: 196px;
+    margin-top: 25px;
+    margin-left: 36px;
+  }
+
+  .search-content .input-lg::placeholder {
+    font-size: 12px;
+  }
+
+  .search-period .period-marks .middle {
+    left: 82px;
+  }
+
+  .page-part-univ .site-content .content .content-sub p .sub-image {
+    background-size: cover;
+    width: 58px;
+    height: 27px;
+  }
+
+  .site-content .lecture-filter .order-group {
+    margin-top: 70px;
+  }
+
+  .site-content .filter-list {
+    margin-top: 0;
+  }
+
+  .site-content .filter-list .list-item > li {
+    padding: 15px 5px 15px 13px;
+  }
+
+  .site-content .filter-list .list-item .del-btn {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .lecture-detail .title-wrapper .info-container .title {
+    font-size: 24px;
+  }
+
+  .lecture-detail .title-wrapper .info-container .info {
+    font-size: 12px;
+  }
+
+  .lecture-detail .lecture-list .item-list .item .lec-thumbnail {
+    width: 120px;
+    height: 83px;
+    float: left;
+    margin: 20px 0px;
+  }
+
+  .page-notice .notice .pagination > li:nth-child(6),
+  .page-notice .notice .pagination > li:nth-child(7),
+  .page-notice .notice .pagination > li:nth-child(8) {
+    display: none;
+  }
+
+  .page-lec-qna .site-content .content .content-sub .sub-description {
+    font-size: 11px;
+  }
+
+  .page-notice-content .wrapper .content .content-title h3 {
+    font-size: 18px;
+  }
+
+  .page-notice-content .wrapper .content .content-description {
+    font-size: 12px;
+  }
+
+  .page-notice-content
+    .wrapper
+    .content
+    .content-menu
+    ul
+    > li
+    > a
+    .title
+    span:first-child {
+    font-size: 14px;
+  }
+
+  .page-notice-content
+    .wrapper
+    .content
+    .content-menu
+    ul
+    > li
+    > a
+    .title
+    span:last-child {
+    font-size: 14px;
+  }
+
+  .page-notice-content .wrapper .content .content-menu ul > li > a {
+    padding: 24px 0px;
+  }
 }

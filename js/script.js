@@ -30,6 +30,11 @@ jQuery(function ($) {
     $("body").css({ height: "", overflow: "" });
   });
 
+  $(".site-map .bg").on("click", function () {
+    $(".site-map").removeClass("on");
+    $("body").css({ height: "", overflow: "" });
+  });
+
   //   search-menu
   $(window).on("scroll", function () {
     if ($(this).scrollTop() >= 275) {
@@ -49,9 +54,11 @@ jQuery(function ($) {
     }
   });
 
-  $(".search-menu .bg").on("click", function () {
-    $(".search-menu").removeClass("on");
-    $("body").css({ height: "", overflow: "" });
+  $(window).on("resize", function () {
+    if ($(this).width() > 1250) {
+      $(".page-main .search-menu").removeClass("on");
+      $("body").css({ height: "", overflow: "" });
+    }
   });
 
   $(".search-pop").on("click", function () {
@@ -62,6 +69,11 @@ jQuery(function ($) {
       $(".search-menu").addClass("on");
       $("body").css({ height: "100%", overflow: "hidden" });
     }
+  });
+
+  $(".search-menu .bg").on("click", function () {
+    $(".search-menu").removeClass("on");
+    $("body").css({ height: "", overflow: "" });
   });
 
   //   category-btn
@@ -88,6 +100,7 @@ jQuery(function ($) {
     });
   });
 
+  // lnb
   $(".lnb .nav").on("mouseover", function () {
     $(".lnb").addClass("over");
     $(".site-header").css({
