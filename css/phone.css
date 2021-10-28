@@ -860,6 +860,39 @@
     left: 82px;
   }
 
+  .page-other .wrapper-snb {
+    height: 40px;
+  }
+
+  .page-other .site-content .wrapper-snb .depth {
+    font-size: 12px;
+  }
+
+  .page-other .search-menu .wrapper {
+    width: 300px;
+  }
+
+  .page-other .search-menu.on .wrapper {
+    width: 300px;
+  }
+
+  .page-other .search-menu.on .wrapper ~ .bg {
+    width: calc(100% - 300px);
+  }
+
+  .search-content .input-wrapper .search-btn {
+    width: 17px;
+    height: 17px;
+  }
+
+  .search-content .search-category .title {
+    font-size: 14px;
+  }
+
+  .page-other .search-menu.on ~ .search-pop {
+    left: 300px;
+  }
+
   .page-part-univ .site-content .content .content-sub p .sub-image {
     background-size: cover;
     width: 58px;
