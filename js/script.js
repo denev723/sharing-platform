@@ -38,13 +38,15 @@ jQuery(function ($) {
   //   search-menu
   $(window).on("scroll", function () {
     if ($(this).scrollTop() >= 275) {
-      $(".page-main .search-menu")
-        .css({
-          position: "fixed",
-          height: "100%",
-          overflow: "scroll",
-        })
-        .scrollTop(275);
+      if ($(".page-main .search-menu").css("position") !== "fixed") {
+        $(".page-main .search-menu")
+          .css({
+            position: "fixed",
+            height: "100%",
+            overflow: "scroll",
+          })
+          .scrollTop(275);
+      }
     } else {
       $(".page-main .search-menu").css({
         position: "absolute",
@@ -88,9 +90,9 @@ jQuery(function ($) {
   });
 
   // period-range
-  $(".period-slider").on("input", function () {
+  $("#period-range").on("input", function () {
     var val = $(this).val();
-    $(".period-slider").css({
+    $("#period-range").css({
       background:
         "linear-gradient(to right, white 0%, white " +
         val +
@@ -100,7 +102,7 @@ jQuery(function ($) {
     });
   });
 
-  $(".period-slider").on("input", function () {
+  $("#period-range").on("input", function () {
     if ($(this).val() === "0") {
       $(".short").css({ display: "block" });
       $(".middle").css({ display: "none" });
@@ -139,3 +141,83 @@ jQuery(function ($) {
     },
   });
 });
+
+var period = document.getElementById("period-range"),
+  inc = document.getElementById("increment"),
+  dec = document.getElementById("decrement"),
+  mid = document.getElementById("middle");
+
+inc.addEventListener(
+  "click",
+  function () {
+    period.stepUp(1);
+    var val = period.value;
+    period.style.background =
+      "linear-gradient(to right, white 0%, white " +
+      val +
+      "%, #82a4ff " +
+      val +
+      "%, #82a4ff 100%)";
+    if (val === "0") {
+      $(".short").css({ display: "block" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "none" });
+    } else if (val === "50") {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "block" });
+      $(".long").css({ display: "none" });
+    } else {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "block" });
+    }
+  },
+  false,
+);
+
+mid.addEventListener("click", function () {
+  var val = period.value;
+  console.log(val);
+  if (val === "0") {
+    period.stepUp(1);
+  } else if (val === "100") {
+    period.stepDown(1);
+  }
+  period.style.background =
+    "linear-gradient(to right, white 0%, white " +
+    50 +
+    "%, #82a4ff " +
+    50 +
+    "%, #82a4ff 100%)";
+  $(".short").css({ display: "none" });
+  $(".middle").css({ display: "block" });
+  $(".long").css({ display: "none" });
+});
+
+dec.addEventListener(
+  "click",
+  function () {
+    period.stepDown(1);
+    var val = period.value;
+    period.style.background =
+      "linear-gradient(to right, white 0%, white " +
+      val +
+      "%, #82a4ff " +
+      val +
+      "%, #82a4ff 100%)";
+    if (val === "0") {
+      $(".short").css({ display: "block" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "none" });
+    } else if (val === "50") {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "block" });
+      $(".long").css({ display: "none" });
+    } else {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "block" });
+    }
+  },
+  false,
+);

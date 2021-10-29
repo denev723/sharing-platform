@@ -400,11 +400,13 @@ input[type="range"]::-ms-fill-upper {
   }
 }
 
-.search-period .range-marks span {
+.search-period .range-marks button {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: #fff;
+  padding: 0;
+  cursor: pointer;
 }
 
 .search-pop {
