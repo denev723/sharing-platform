@@ -595,8 +595,9 @@ input[type="range"]::-ms-fill-upper {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/sitemap-close.png);
-  width: calc(55px / 2);
-  height: 27px;
+  background-size: cover;
+  width: 26px;
+  padding-top: calc(55 / 54 * 13px);
   margin-top: 30px;
   margin-left: 30px;
 }
@@ -2671,7 +2672,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .page-part-univ .site-content .content .item-list .item {
-  height: 380px;
+  height: 320px;
   padding: 0;
   border: 1px solid #d5d8df;
 }
@@ -2708,7 +2709,7 @@ input[type="range"]::-ms-fill-upper {
 .page-part-univ .site-content .content .item-list .item .item-logo {
   display: flex;
   justify-content: center;
-  padding: 78px 0px;
+  padding: 48px 0px;
 }
 
 .page-part-univ .site-content .content .item-list .item .item-logo span {

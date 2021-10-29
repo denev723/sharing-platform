@@ -100,6 +100,22 @@ jQuery(function ($) {
     });
   });
 
+  $(".period-slider").on("input", function () {
+    if ($(this).val() === "0") {
+      $(".short").css({ display: "block" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "none" });
+    } else if ($(this).val() === "50") {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "block" });
+      $(".long").css({ display: "none" });
+    } else {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "block" });
+    }
+  });
+
   // lnb
   $(".lnb .nav").on("mouseover", function () {
     $(".lnb").addClass("over");

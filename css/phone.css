@@ -59,6 +59,10 @@
   height: 35px;
 }
 
+.search-content {
+  padding: 18px 40px 40px;
+}
+
 .search-pop {
   top: 229px;
   width: 50px;
@@ -71,7 +75,7 @@
 }
 .search-menu .search-sub {
   width: 266px;
-  margin-left: 56px;
+  margin-left: 26px;
 }
 
 .search-content .search-category .category-title {
@@ -110,7 +114,7 @@
 }
 
 .page-main .lecture-outro .item-wrapper .item {
-  padding: 40px 0px;
+  padding: 20px 0px;
 }
 
 .page-main .lecture-outro .item-wrapper .item:nth-child(2) {
@@ -130,7 +134,7 @@
 }
 
 .page-main .search-menu .wrapper {
-  width: 450px;
+  width: 400px;
 }
 
 .page-main .search-menu .site-footer {
@@ -145,7 +149,7 @@
 }
 
 .search-menu.on .bg {
-  width: calc(100% - 450px);
+  width: calc(100% - 400px);
 }
 
 .page-main .search-menu.on .wrapper {
@@ -159,7 +163,7 @@
 }
 
 .page-main .search-menu.on ~ .search-pop {
-  left: 450px;
+  left: 400px;
 }
 
 .page-main .search-pop {
@@ -213,6 +217,10 @@
   margin-top: 45px;
 }
 
+.lecture .thumbnail {
+  margin-bottom: 30px;
+}
+
 .page-main .lecture > .title {
   font-size: 24px;
 }
@@ -254,20 +262,24 @@
   left: 0;
 }
 
+.page-other .search-menu .wrapper {
+  width: 400px;
+}
+
 .page-other .search-menu.on {
   left: 0;
 }
 
 .page-other .search-menu.on .wrapper {
-  width: 450px;
+  width: 400px;
 }
 
 .page-other .search-menu.on .wrapper ~ .bg {
-  width: calc(100% - 450px);
+  width: calc(100% - 400px);
 }
 
 .page-other .search-menu.on ~ .search-pop {
-  left: 450px;
+  left: 400px;
 }
 
 .page-other .site-content {
@@ -456,7 +468,7 @@
 }
 
 .page-part-univ .site-content .content .item-list .item {
-  height: 310px;
+  height: 230px;
 }
 
 .page-part-univ .site-content .content .item-list .item:nth-child(1),
@@ -509,7 +521,7 @@
 }
 
 .page-part-univ .site-content .content .item-list .item .item-logo {
-  padding: 53px 0px;
+  padding: 20px 0px;
 }
 
 /* .page-part-univ .site-content .content .item-list .item {
@@ -763,13 +775,6 @@
   padding: 26px 0px 19px;
 }
 
-.page-lec-qna .site-content .content .content-sub .sub-image {
-  margin: 30px 16px;
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-}
-
 .page-lec-qna .site-content .content .content-sub .sub-description {
   font-size: 12px;
   line-height: 22px;
@@ -822,7 +827,15 @@
   }
 
   .search-content {
-    padding: 18px 48px 40px;
+    padding: 18px 38px 40px;
+  }
+
+  .search-content .search-category .category-title {
+    font-size: 10px;
+  }
+
+  .search-content .search-category .category-number {
+    font-size: 10px;
   }
 
   .search-pop .search-icon {
@@ -852,12 +865,28 @@
     margin-left: 36px;
   }
 
+  .page-other .search-menu.on .wrapper {
+    width: 300px;
+  }
+
+  .page-other .search-menu .wrapper {
+    width: 300px;
+  }
+
+  .page-other .search-menu.on .wrapper ~ .bg {
+    width: calc(100% - 300px);
+  }
+
+  .page-other .search-menu.on ~ .search-pop {
+    left: 300px;
+  }
+
   .search-content .input-lg::placeholder {
     font-size: 12px;
   }
 
   .search-period .period-marks .middle {
-    left: 82px;
+    left: 92px;
   }
 
   .page-part-univ .site-content .content .content-sub p .sub-image {
@@ -896,6 +925,10 @@
     height: 83px;
     float: left;
     margin: 20px 0px;
+  }
+
+  .lecture-detail .video-wrapper .info-container .sub-info {
+    font-size: 12px;
   }
 
   .page-notice .notice .pagination > li:nth-child(6),
