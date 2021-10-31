@@ -1086,6 +1086,18 @@ input[type="range"]::-ms-fill-upper {
   position: relative;
 }
 
+.content-category-wrapper {
+  border-bottom-left-radius: 0px;
+  margin: 0;
+  padding: 0;
+  width: 75px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  background: linear-gradient(to right, transparent 10%, #eee 90%);
+}
+
 .content-category::-webkit-scrollbar {
   display: none;
 }
